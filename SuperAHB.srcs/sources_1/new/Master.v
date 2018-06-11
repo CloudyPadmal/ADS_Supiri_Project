@@ -38,12 +38,12 @@ module Master(
     output [31:0] HWDATA
     );
     
-    reg HBUSREQ,HLOCK,HWRITE,hcount;
+    reg HBUSREQ,HLOCKx,HWRITE,hcount;
     reg [1:0]HTRANS,HSEL;
     reg [31:0]HADDR,HWDATA;
     reg [2:0]HSIZE,HBURST;
     
-    wire HGRANT,HREADY,HCLK,HRESETn,WRITE;
+    wire HGRANTx,HREADY,HCLK,HRESETn,WRITE;
     wire [31:0]ADDR,WDATA;
     wire [2:0]SIZE,BURST;
     wire [1:0]HRESP,SEL,TRANS;
@@ -63,7 +63,7 @@ module Master(
        if(!HRESETn)              //Master reset
        begin
           HBUSREQ = 0;
-          HLOCK = 0;
+          HLOCKx = 0;
           HWRITE = 0;
           HTRANS = 2'b00;
           HSEL = 2'b00;
@@ -89,15 +89,15 @@ module Master(
             bus_reg = 1;
           end
          else if(!BUSREQ)
-            HLOCK = 1'b0; 
+            HLOCKx = 1'b0; 
        end
        
        else if(bus_reg)
           begin
           HBUSREQ = 1'b0;
           bus_reg = 0;
-          if(HGRANT)
-            HLOCK = 1'b1;
+          if(HGRANTx)
+            HLOCKx = 1'b1;
           end
        
     end
@@ -106,7 +106,7 @@ module Master(
     begin 
       if(HRESETn)
       begin 
-        if(HGRANT)
+        if(HGRANTx)
         begin
           if(!addr_reg)
           begin
@@ -236,7 +236,7 @@ module Master_tb;
                 // Inputs
                 reg HRESETn;
                 reg HCLK;
-                reg HGRANT;
+                reg HGRANTx;
                 reg HREADY;
                 reg [1:0] HRESP;
                 reg [31:0] HRDATA;
@@ -252,7 +252,7 @@ module Master_tb;
 
                 // Outputs
                 wire HBUSREQ;
-                wire HLOCK;
+                wire HLOCKx;
                 wire [1:0] HTRANS;
                 wire [31:0] HADDR;
                 wire HWRITE;
@@ -264,7 +264,7 @@ module Master_tb;
                 // Instantiate the Unit Under Test (UUT)
                 ahb_master uut (
                                 .HBUSREQ(HBUSREQ),
-                                .HLOCK(HLOCK),
+                                .HLOCKx(HLOCKx),
                                 .HTRANS(HTRANS),
                                 .HADDR(HADDR),
                                 .HWRITE(HWRITE),
@@ -274,7 +274,7 @@ module Master_tb;
                                 .HSEL(HSEL),
                                 .HRESETn(HRESETn),
                                 .HCLK(HCLK),
-                                .HGRANT(HGRANT),
+                                .HGRANTx(HGRANTx),
                                 .HREADY(HREADY),
                                 .HRESP(HRESP),
                                 .HRDATA(HRDATA),
@@ -293,7 +293,7 @@ module Master_tb;
                                 // Initialize Inputs
                                 HRESETn = 0;
                                 HCLK = 0;
-                                HGRANT = 0;
+                                HGRANTx = 0;
                                 HREADY = 0;
                                 HRESP = 0;
                                 HRDATA = 0;
@@ -310,7 +310,7 @@ module Master_tb;
                                 // Wait 100 ns for global reset to finish
                                 #100;
                                 HRESETn = 1;
-                                HGRANT = $rand;
+                                HGRANTx = $rand;
                                 HREADY = $rand;
                                 HRESP = 0;
                                 HRDATA = 0;
