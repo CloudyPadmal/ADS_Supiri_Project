@@ -28,7 +28,15 @@ module Decoder(
     output reg HSELx1,
     output reg HSELx2,
     output reg HSELx3
-    );    
+    );
+    
+    always @ (HRESETn)
+        if (HRESETn == 1'b0) 
+            begin
+                HSELx1 = 1'b0;
+                HSELx2 = 1'b0;
+                HSELx3 = 1'b0;
+            end        
     
     always @ (posedge HCLK) 
         case (HADDR)
@@ -56,6 +64,63 @@ module Decoder(
                     HSELx2 = 1'b0;
                     HSELx3 = 1'b0;
                 end
-        endcase 
+        endcase
     
+endmodule
+
+module Decoder_tb();
+ 
+  reg [11:0] HADDR;
+  reg HCLK;
+  reg HRESETn;
+  
+  wire HSELx1;
+  wire HSELx2;
+  wire HSELx3;
+  
+  initial begin
+      HCLK = 1'b0;
+      forever begin
+          #1 HCLK = ~HCLK;
+      end
+  end
+   
+  Decoder DUT (
+    .HADDR(HADDR),
+    .HCLK(HCLK),
+    .HRESETn(HRESETn),
+    .HSELx1(HSELx1),
+    .HSELx2(HSELx2),
+    .HSELx3(HSELx3)
+  );
+ 
+  initial begin
+    HADDR = 12'b0000_0000_0000;
+    HRESETn = 1'b1;
+    #2
+    HADDR = 12'b1111_0000_0000;
+    #2
+    HADDR = 12'b0000_1111_0000;
+    #2
+    HADDR = 12'b0000_0000_1111;
+    #2
+    HADDR = 12'b1111_0000_1111;
+    #2
+    HADDR = 12'b0000_1111_0000;
+    #2
+    HRESETn = 1'b0;
+    HADDR = 12'b0000_1111_0000;
+    #2
+    HADDR = 12'b0000_0000_1111;
+    #2
+    HRESETn = 1'b1;
+    HADDR = 12'b1111_0000_1111;
+    #2
+    HADDR = 12'b0000_1111_0000;
+    #2
+    HADDR = 12'b1111_0000_0000;
+    #2
+    $finish;
+  end
+ 
 endmodule

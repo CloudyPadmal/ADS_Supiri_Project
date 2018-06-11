@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Mon Jun 11 16:24:12 2018
+# Process ID: 9132
+# Current directory: C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/impl_1
+# Command line: vivado.exe -log Decoder_tb.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Decoder_tb.tcl -notrace
+# Log file: C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/impl_1/Decoder_tb.vdi
+# Journal file: C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Decoder_tb.tcl -notrace
