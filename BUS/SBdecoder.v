@@ -96,8 +96,8 @@ module SBdecoder(
 				3'b110 : num_beat <= 30'd15;
 				3'b111 : num_beat <= 30'd31;
 			endcase
-			if(sb_addr[HIGH_BIT+:BIT_WIDTH]==2'b01)begin
-			   if(sb_addr[0+:ADD1_WIDTH]+num_beat > 30'd2047)begin
+			if(sb_addr[HIGH_BIT+:BIT_WIDTH]==2'b01)begin//slave 1 selection using first two bits
+			   if(sb_addr[0+:ADD1_WIDTH]+num_beat > 30'd2047)begin// wrong address
 			     sb_resp <= ERROR;
 				 add_notokay <= 1'b1;
 				 sb_sel_s1 <= 1'b0;
@@ -107,7 +107,7 @@ module SBdecoder(
 				sb_sel_s1 <= 1'b1;
 			   end
 			end
-			else if(sb_addr[HIGH_BIT+:BIT_WIDTH]==2'b10)begin
+			else if(sb_addr[HIGH_BIT+:BIT_WIDTH]==2'b10)begin//slave 2 selection
 			   if(sb_addr[0+:ADD1_WIDTH]+num_beat>30'd2047)begin
 			     sb_resp <= ERROR;
 				 add_notokay <= 1'b1;
