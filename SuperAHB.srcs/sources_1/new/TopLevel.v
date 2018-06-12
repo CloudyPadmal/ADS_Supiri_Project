@@ -21,8 +21,16 @@
 
 
 module TopLevel(
+    input CLK,
+    input RST,
+
+    input BUS_REQ_1,
+    input BUS_REQ_2,
     input [31:0] M1_IN,
     input [31:0] M2_IN,
+    output GRANTED_1,
+    output GRANTED_2,
+    output SEL_MASTER,
     output [31:0] S1_OUT,
     output [31:0] S2_OUT,
     output [31:0] S3_OUT,
@@ -32,18 +40,18 @@ module TopLevel(
     
     
     Arbiter SupiriArbiter(
-        .HBUSREQx1(),
-        .HBUSREQx2(),
+        .HBUSREQx1(BUS_REQ_1),
+        .HBUSREQx2(BUS_REQ_2),
         .HSPLITx(),
-        //input [1:0] HTRANS,
-        //input [2:0] HBURST,
-        //input [1:0] HRESP,
-        input [2:0] HREADY,
-        input HRESETn,
-        input HCLK,
-        output reg HGRANT1,
-        output reg HGRANT2,
-        output reg [1:0] HMASTER//,
+        //HTRANS,
+        //HBURST,
+        //HRESP,
+        .HREADY(),
+        .HRESETn(RST),
+        .HCLK(CLK),
+        .HGRANT1(GRANTED_1),
+        .HGRANT2(GRANTED_2),
+        .HMASTER(SEL_MASTER)//,
         //output reg HMASTLOCK
         );
 endmodule

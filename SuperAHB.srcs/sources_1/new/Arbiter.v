@@ -65,65 +65,62 @@ module Arbiter(
             end
         else
             begin
-            case (CURRENT_STATE) begin
-                NORMAL_STATE:
-                    begin
-                        if (HREADY == 3'b111) begin
-                                        case (BUSREQUEST)
-                                            2'b01:
-                                                begin
-                                                    if (HSPLITx == 2'b10) begin
-                                                        HGRANT1 <= 1'b1;
-                                                        HGRANT2 <= 1'b0;
-                                                        HMASTER <= 2'b10;
-                                                        
-                                                    end
-                                                    else begin
-                                                        HGRANT1 <= 1'b0;
-                                                        HGRANT2 <= 1'b1;
-                                                        HMASTER <= 2'b01;
-                                                    end
-                                                end
-                                            2'b10:
-                                                begin
-                                                    if (HSPLITx == 2'b01) begin
-                                                          HGRANT1 <= 1'b0;
-                                                          HGRANT2 <= 1'b1;
-                                                          HMASTER <= 2'b01;
-                                                    end
-                                                    else begin
-                                                        HGRANT1 <= 1'b1;
-                                                        HGRANT2 <= 1'b0;
-                                                        HMASTER <= 2'b10;
-                                                    end
-                                                end
-                                            default:
-                                                begin
-                                                    HGRANT1 <= 1'b0;
-                                                    HGRANT2 <= 1'b0;
-                                                    HMASTER <= 2'b00; // Master request naththam HMASTER binduwai
-                                                end
-                                          endcase  
-                                        end
-                                    else
+                case (CURRENT_STATE)
+                    NORMAL_STATE:
+                        begin
+                            if (HREADY == 3'b111) begin
+                                case (BUSREQUEST)
+                                    2'b01:
                                         begin
-                                            HGRANT1 <= HGRANT1;
-                                            HGRANT2 <= HGRANT2;
-                                            HMASTER <= HMASTER;
+                                            if (HSPLITx == 2'b10) begin
+                                                HGRANT1 <= 1'b1;
+                                                HGRANT2 <= 1'b0;
+                                                HMASTER <= 2'b10;
+                                                
+                                            end
+                                            else begin
+                                                HGRANT1 <= 1'b0;
+                                                HGRANT2 <= 1'b1;
+                                                HMASTER <= 2'b01;
+                                            end
                                         end
-                                        
-                                       
-                    end
+                                    2'b10:
+                                        begin
+                                            if (HSPLITx == 2'b01) begin
+                                                  HGRANT1 <= 1'b0;
+                                                  HGRANT2 <= 1'b1;
+                                                  HMASTER <= 2'b01;
+                                            end
+                                            else begin
+                                                HGRANT1 <= 1'b1;
+                                                HGRANT2 <= 1'b0;
+                                                HMASTER <= 2'b10;
+                                            end
+                                        end
+                                    default:
+                                        begin
+                                            HGRANT1 <= 1'b0;
+                                            HGRANT2 <= 1'b0;
+                                            HMASTER <= 2'b00; // Master request naththam HMASTER binduwai
+                                        end
+                                endcase  
+                            end
+                                        else
+                                            begin
+                                                HGRANT1 <= HGRANT1;
+                                                HGRANT2 <= HGRANT2;
+                                                HMASTER <= HMASTER;
+                                            end
+                                            
+                                           
+                        end
                     LOCKED_STATE:
                         begin
                            HGRANT1 <= HGRANT1;
                            HGRANT2 <= HGRANT2;
                            HMASTER <= HMASTER;
-                        end
-                    
-            endcase
-            
-                
+                        end                 
+                endcase 
             end  
         end
 endmodule
