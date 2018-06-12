@@ -50,6 +50,9 @@ module Arbiter(
         if (HLOCKx == 1'b0) begin
             CURRENT_STATE <= NORMAL_STATE;
         end
+        else begin
+            CURRENT_STATE <= LOCKED_STATE;
+        end
     end
     
     always @ (posedge HCLK or negedge HRESETn) begin
@@ -73,6 +76,7 @@ module Arbiter(
                                                         HGRANT1 <= 1'b1;
                                                         HGRANT2 <= 1'b0;
                                                         HMASTER <= 2'b10;
+                                                        
                                                     end
                                                     else begin
                                                         HGRANT1 <= 1'b0;
@@ -107,7 +111,16 @@ module Arbiter(
                                             HGRANT2 <= HGRANT2;
                                             HMASTER <= HMASTER;
                                         end
+                                        
+                                       
                     end
+                    LOCKED_STATE:
+                        begin
+                           HGRANT1 <= HGRANT1;
+                           HGRANT2 <= HGRANT2;
+                           HMASTER <= HMASTER;
+                        end
+                    
             endcase
             
                 
