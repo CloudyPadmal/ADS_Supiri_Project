@@ -22,7 +22,7 @@ module MasterA(
     reg [2:0] MASTER_STATE;
     reg WRITE_COMPLETE;
     reg READ_COMPLETE;
-    
+
     localparam  OKAY    = 2'b00,
                 ERROR   = 2'b01,
                 RETRY   = 2'b10,
@@ -55,7 +55,7 @@ module MasterA(
                     HBUSREQx <= 1;
                     if (HGRANTx) begin
                         HLOCKx = 1;
-                        if (RW == 1) begin
+                        if (RW == 1) begin //Test Bench Input
                             MASTER_STATE <= INITIATE_WRITE;
                         end
                         else begin
@@ -70,8 +70,8 @@ module MasterA(
                     if (HREADY) begin
                         HWRITE <= 1;
                         if (!WRITE_COMPLETE) begin
-                            HADDR <= INHADDR;
-                            HWDATA <= INHWDATA;
+                            HADDR <= INHADDR; //Test Bench input Address
+                            HWDATA <= INHWDATA; //Test Bench input Data
                             MASTER_STATE <= INITIATE_BUS_REQUEST;
                             WRITE_COMPLETE = 1;
                         end
@@ -85,11 +85,11 @@ module MasterA(
                             end
                         end
                     end
-                    else begin
-                        if (HRESP == SPLIT) begin
+                    else begin //If Slave is not ready
+                        if (HRESP == SPLIT) begin //HRESP- Slave Status
                             MASTER_STATE <= WRITE_SPLIT;
                         end
-                        else begin
+                        else begin //If slave not issued Split
                             MASTER_STATE <= INITIATE_BUS_REQUEST;
                         end
                     end
@@ -97,7 +97,7 @@ module MasterA(
                 INITIATE_READ: begin
                     if (HREADY) begin
                         HWRITE <= 0;
-                        HADDR <= INHADDR;
+                        HADDR <= INHADDR; //Test bench address
                         MASTER_STATE <= READ_DATA;
                     end
                     else begin
@@ -105,7 +105,7 @@ module MasterA(
                     end
                 end
                 WRITE_SPLIT: begin
-                    HTRANS <= IDLE;
+                    HTRANS <= IDLE;     //HTRANS- Master Status
                     if (HGRANTx && HREADY) begin
                         MASTER_STATE <= INITIATE_WRITE;
                     end
@@ -126,11 +126,11 @@ module MasterA(
                     if (HREADY) begin
                         HWRITE <= 0;
                         if (!READ_COMPLETE) begin
-                            INHRDATA <= HRDATA;
+                            INHRDATA <= HRDATA; //TestBench Output
                             READ_COMPLETE = 1;
                             MASTER_STATE <= INITIATE_BUS_REQUEST;
                         end
-                        else begin
+                        else begin // If read complete
                             if (HRESP == OKAY) begin
                                 MASTER_STATE <= READ_FINISH;
                             end

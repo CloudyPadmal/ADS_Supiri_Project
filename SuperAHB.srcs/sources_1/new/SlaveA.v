@@ -61,7 +61,7 @@ module SlaveA(
                         SLAVE_STATE <= INITIATE_SLAVE;
                     end
                     INITIATE_SLAVE: begin
-                        OUTHADDR <= HADDR[11:0];
+                        OUTHADDR <= HADDR[11:0]; //Decoder Out
                         if (HWRITE) begin
                             SLAVE_STATE <= INITIATE_WRITE_SLAVE;
                         end
