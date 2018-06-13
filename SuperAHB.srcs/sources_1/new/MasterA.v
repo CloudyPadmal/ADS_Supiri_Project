@@ -64,10 +64,15 @@ module MasterA(
                         HLOCKx = 1;
                         if (RW == 1) begin //Test Bench Input
                             MASTER_STATE <= INITIATE_WRITE;
+                            HWRITE <= 1;
                         end
                         else begin
                             MASTER_STATE <= INITIATE_READ;
+                            HWRITE <= 0;
                         end
+                    end
+                    else if (HRESP == SPLIT) begin
+                        MASTER_STATE <= READ_SPLIT;
                     end
                     else begin
                         MASTER_STATE <= INITIATE_BUS_REQUEST;
@@ -75,7 +80,7 @@ module MasterA(
                 end
                 INITIATE_WRITE: begin
                     if (HREADY) begin
-                        HWRITE <= 1;
+                        //HWRITE <= 1;
                         if (!WRITE_COMPLETE) begin
                             HADDR <= INHADDR; //Test Bench input Address
                             HWDATA <= INHWDATA; //Test Bench input Data
@@ -103,7 +108,7 @@ module MasterA(
                 end
                 INITIATE_READ: begin
                     if (HREADY) begin
-                        HWRITE <= 0;
+                        //HWRITE <= 0;
                         HADDR <= INHADDR; //Test bench address
                         MASTER_STATE <= READ_DATA;
                     end
@@ -124,13 +129,14 @@ module MasterA(
                     HTRANS <= IDLE;
                     if (HGRANTx && HREADY) begin
                         MASTER_STATE <= INITIATE_READ;
+                        HLOCKx <= 1;
                     end
                     else begin
                         MASTER_STATE <= READ_SPLIT;
                     end
                 end
                 READ_DATA: begin
-                    if (HREADY) begin
+                    if (HGRANTx) begin
                         HWRITE <= 0;
                         if (!READ_COMPLETE) begin
                             INHRDATA <= HRDATA; //TestBench Output
