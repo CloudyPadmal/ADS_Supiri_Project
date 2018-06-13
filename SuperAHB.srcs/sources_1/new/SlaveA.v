@@ -19,7 +19,7 @@ module SlaveA(
     output reg [13:0] OUTHADDR,
     output reg [31:0] OUTHWDATA
 );
-    parameter 
+   // parameter 
     reg [3:0] SLAVE_STATE;
     reg WRITE_COMPLETE;
     reg READ_COMPLETE;

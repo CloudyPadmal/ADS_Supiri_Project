@@ -68,6 +68,7 @@ module MasterA(
                         end
                         else MASTER_STATE <= INITIATE_BUS_REQUEST; //Otherwise wait for grant
                     end
+                    else if (HRESP == SPLIT) MASTER_STATE <= READ_SPLIT;
                     else MASTER_STATE <= INITIATE_READ; //If rw is not enabled, go to read state
                 //////////////
                 /*
