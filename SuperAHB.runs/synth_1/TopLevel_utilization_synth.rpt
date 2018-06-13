@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Wed Jun 13 17:44:00 2018
+| Date         : Wed Jun 13 19:03:37 2018
 | Host         : DESKTOP-32FSOJU running 64-bit major release  (build 9200)
 | Command      : report_utilization -file TopLevel_utilization_synth.rpt -pb TopLevel_utilization_synth.pb
 | Design       : TopLevel
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  441 |     0 |     41000 |  1.08 |
-|   LUT as Logic          |  441 |     0 |     41000 |  1.08 |
+| Slice LUTs*             |  444 |     0 |     41000 |  1.08 |
+|   LUT as Logic          |  444 |     0 |     41000 |  1.08 |
 |   LUT as Memory         |    0 |     0 |     13400 |  0.00 |
-| Slice Registers         |  510 |     0 |     82000 |  0.62 |
-|   Register as Flip Flop |  432 |     0 |     82000 |  0.53 |
+| Slice Registers         |  513 |     0 |     82000 |  0.63 |
+|   Register as Flip Flop |  435 |     0 |     82000 |  0.53 |
 |   Register as Latch     |   78 |     0 |     82000 |  0.10 |
 | F7 Muxes                |    0 |     0 |     20500 |  0.00 |
 | F8 Muxes                |    0 |     0 |     10250 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 80    |          Yes |           - |        Reset |
 | 3     |          Yes |         Set |            - |
-| 427   |          Yes |       Reset |            - |
+| 430   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -151,15 +151,15 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  427 |        Flop & Latch |
-| LUT3     |  286 |                 LUT |
+| FDRE     |  430 |        Flop & Latch |
+| LUT3     |  287 |                 LUT |
 | OBUF     |  202 |                  IO |
 | IBUF     |  193 |                  IO |
-| LUT2     |  135 |                 LUT |
+| LUT2     |  136 |                 LUT |
 | LDCE     |   78 |        Flop & Latch |
 | LUT5     |   46 |                 LUT |
 | LUT6     |   42 |                 LUT |
-| LUT4     |   19 |                 LUT |
+| LUT4     |   20 |                 LUT |
 | FDSE     |    3 |        Flop & Latch |
 | BUFG     |    3 |               Clock |
 | FDCE     |    2 |        Flop & Latch |

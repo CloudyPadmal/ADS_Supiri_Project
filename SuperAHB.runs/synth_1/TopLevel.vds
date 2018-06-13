@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Wed Jun 13 17:43:22 2018
-# Process ID: 1140
+# Start of session at: Wed Jun 13 19:03:01 2018
+# Process ID: 6648
 # Current directory: C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/synth_1
 # Command line: vivado.exe -log TopLevel.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TopLevel.tcl
 # Log file: C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/synth_1/TopLevel.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8968 
+INFO: Helper process launched with PID 10448 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 359.422 ; gain = 100.832
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 359.164 ; gain = 100.359
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:35]
@@ -94,19 +94,18 @@ WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[2]
 WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[1]
 WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[0]
 WARNING: [Synth 8-3331] design Arbiter has unconnected port HMASTLOCK
-WARNING: [Synth 8-3331] design Arbiter has unconnected port HLOCKx
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 413.359 ; gain = 154.770
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 414.188 ; gain = 155.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 413.359 ; gain = 154.770
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 414.188 ; gain = 155.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k70tfbg676-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 413.359 ; gain = 154.770
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 414.188 ; gain = 155.383
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7k70tfbg676-1
 INFO: [Synth 8-5544] ROM "HGRANT1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -169,7 +168,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'HADDR_MUX_OUT_reg' [C:/User
 WARNING: [Synth 8-327] inferring latch for variable 'HWDATA_MUX_OUT_reg' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:37]
 WARNING: [Synth 8-327] inferring latch for variable 'HRDATA_reg' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:49]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 425.742 ; gain = 167.152
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 425.398 ; gain = 166.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -298,17 +297,13 @@ WARNING: [Synth 8-3331] design SlaveA has unconnected port HMASTLOCK
 WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[13]
 WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[12]
 WARNING: [Synth 8-3331] design Arbiter has unconnected port HMASTLOCK
-WARNING: [Synth 8-3331] design Arbiter has unconnected port HLOCKx
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (SupiriArbiter/CURRENT_STATE_reg)
 INFO: [Synth 8-3886] merging instance 'MasterA:/HTRANS_reg[0]' (FDE) to 'MasterA:/HTRANS_reg[1]'
 INFO: [Synth 8-3886] merging instance 'SlaveA:/OUTHADDR_reg[12]' (FDE) to 'SlaveA:/OUTHADDR_reg[13]'
 INFO: [Synth 8-3886] merging instance 'SlaveA:/HRESP_reg[0]' (FDE) to 'SlaveA:/HRESP_reg[1]'
-WARNING: [Synth 8-3332] Sequential element (CURRENT_STATE_reg) is unused and will be removed from module Arbiter.
-WARNING: [Synth 8-3332] Sequential element (HLOCKx_reg) is unused and will be removed from module MasterA.
 INFO: [Synth 8-3886] merging instance 'SupiriArbiter/HGRANT2_reg' (FDCE) to 'SupiriArbiter/HMASTER_reg[0]'
 INFO: [Synth 8-3886] merging instance 'SupiriArbiter/HGRANT1_reg' (FDCE) to 'SupiriArbiter/HMASTER_reg[1]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 576.012 ; gain = 317.422
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 572.551 ; gain = 313.746
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -321,7 +316,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 576.012 ; gain = 317.422
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 572.551 ; gain = 313.746
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -333,7 +328,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 576.012 ; gain = 317.422
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 572.551 ; gain = 313.746
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -357,18 +352,18 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 576.012 ; gain = 317.422
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 572.551 ; gain = 313.746
 ---------------------------------------------------------------------------------
 CRITICAL WARNING: [Synth 8-3352] multi-driven net BUS_REQ_2_IBUF with 1st driver pin 'BUS_REQ_2_IBUF_inst/O' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
 CRITICAL WARNING: [Synth 8-3352] multi-driven net BUS_REQ_2_IBUF with 2nd driver pin 'Master_BINTERFACE/HBUSREQx_reg/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:54]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net BUS_REQ_1_IBUF with 1st driver pin 'BUS_REQ_1_IBUF_inst/O' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net BUS_REQ_1_IBUF with 2nd driver pin 'Master_AINTERFACE/HBUSREQx_reg/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:54]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net HSPLIT[0] with 1st driver pin 'Slave_CINTERFACE/HSPLITx_reg[0]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:54]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net HSPLIT[0] with 2nd driver pin 'Slave_BINTERFACE/HSPLITx_reg[0]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:54]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net HSPLIT[0] with 3rd driver pin 'Slave_AINTERFACE/HSPLITx_reg[0]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:54]
 CRITICAL WARNING: [Synth 8-3352] multi-driven net HSPLIT[1] with 1st driver pin 'Slave_CINTERFACE/HSPLITx_reg[1]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:54]
 CRITICAL WARNING: [Synth 8-3352] multi-driven net HSPLIT[1] with 2nd driver pin 'Slave_BINTERFACE/HSPLITx_reg[1]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:54]
 CRITICAL WARNING: [Synth 8-3352] multi-driven net HSPLIT[1] with 3rd driver pin 'Slave_AINTERFACE/HSPLITx_reg[1]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net HSPLIT[0] with 1st driver pin 'Slave_CINTERFACE/HSPLITx_reg[0]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net HSPLIT[0] with 2nd driver pin 'Slave_BINTERFACE/HSPLITx_reg[0]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net HSPLIT[0] with 3rd driver pin 'Slave_AINTERFACE/HSPLITx_reg[0]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net BUS_REQ_1_IBUF with 1st driver pin 'BUS_REQ_1_IBUF_inst/O' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net BUS_REQ_1_IBUF with 2nd driver pin 'Master_AINTERFACE/HBUSREQx_reg/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:54]
 CRITICAL WARNING: [Synth 8-3352] multi-driven net HWRITE with 1st driver pin 'Master_BINTERFACE/HWRITE_reg/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:52]
 CRITICAL WARNING: [Synth 8-3352] multi-driven net HWRITE with 2nd driver pin 'Master_AINTERFACE/HWRITE_reg/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:52]
 CRITICAL WARNING: [Synth 8-3352] multi-driven net HTRANS[0] with 1st driver pin 'Master_BINTERFACE/HTRANS_reg[1]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:53]
@@ -387,7 +382,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 576.012 ; gain = 317.422
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 572.551 ; gain = 313.746
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -399,25 +394,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 576.012 ; gain = 317.422
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 572.551 ; gain = 313.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 576.012 ; gain = 317.422
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 572.551 ; gain = 313.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 576.012 ; gain = 317.422
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 572.551 ; gain = 313.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 576.012 ; gain = 317.422
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 572.551 ; gain = 313.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -435,13 +430,13 @@ Report Cell Usage:
 +------+-----+------+
 |1     |BUFG |     3|
 |2     |LUT1 |     1|
-|3     |LUT2 |   135|
-|4     |LUT3 |   286|
-|5     |LUT4 |    19|
+|3     |LUT2 |   136|
+|4     |LUT3 |   287|
+|5     |LUT4 |    20|
 |6     |LUT5 |    46|
 |7     |LUT6 |    42|
 |8     |FDCE |     2|
-|9     |FDRE |   427|
+|9     |FDRE |   430|
 |10    |FDSE |     3|
 |11    |LD   |    78|
 |12    |IBUF |   193|
@@ -452,21 +447,21 @@ Report Instance Areas:
 +------+--------------------+----------+------+
 |      |Instance            |Module    |Cells |
 +------+--------------------+----------+------+
-|1     |top                 |          |  1437|
-|2     |  Master_AINTERFACE |MasterA   |   148|
-|3     |  Master_BINTERFACE |MasterA_0 |   226|
+|1     |top                 |          |  1443|
+|2     |  Master_AINTERFACE |MasterA   |   151|
+|3     |  Master_BINTERFACE |MasterA_0 |   229|
 |4     |  Slave_AINTERFACE  |SlaveA    |   179|
-|5     |  Slave_BINTERFACE  |SlaveA_1  |   181|
-|6     |  Slave_CINTERFACE  |SlaveA_2  |   212|
+|5     |  Slave_BINTERFACE  |SlaveA_1  |   179|
+|6     |  Slave_CINTERFACE  |SlaveA_2  |   214|
 |7     |  SupiriArbiter     |Arbiter   |     8|
 |8     |  SupiriDecoder     |Decoder   |     6|
 +------+--------------------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 576.012 ; gain = 317.422
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 572.551 ; gain = 313.746
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 17 critical warnings and 37 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 576.012 ; gain = 317.422
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 576.012 ; gain = 317.422
+Synthesis finished with 0 errors, 17 critical warnings and 33 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 572.551 ; gain = 313.746
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 572.551 ; gain = 313.746
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 271 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -477,10 +472,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LD => LDCE: 78 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-58 Infos, 37 Warnings, 17 Critical Warnings and 0 Errors encountered.
+57 Infos, 33 Warnings, 17 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 661.191 ; gain = 415.422
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 656.105 ; gain = 410.266
 INFO: [Common 17-1381] The checkpoint 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/synth_1/TopLevel.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file TopLevel_utilization_synth.rpt -pb TopLevel_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 661.191 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Jun 13 17:44:00 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 656.105 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 13 19:03:37 2018...
