@@ -1,5 +1,3 @@
-`timescale 1ns / 1ps
-
 module MasterA(
     input HGRANTx,
     input HREADY,
@@ -130,6 +128,7 @@ module MasterA(
                         if (!READ_COMPLETE) begin
                             INHRDATA <= HRDATA; //TestBench Output
                             READ_COMPLETE = 1;
+                            MASTER_STATE <= INITIATE_BUS_REQUEST;
                         end
                         else begin // If read complete
                             if (HRESP == OKAY) begin

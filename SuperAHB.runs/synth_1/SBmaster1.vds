@@ -1,0 +1,486 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue Jun 12 21:00:32 2018
+# Process ID: 10196
+# Current directory: C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/synth_1
+# Command line: vivado.exe -log SBmaster1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SBmaster1.tcl
+# Log file: C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/synth_1/SBmaster1.vds
+# Journal file: C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source SBmaster1.tcl -notrace
+Command: synth_design -top SBmaster1 -part xc7k70tfbg676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6348 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 358.688 ; gain = 99.625
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'SBmaster1' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:23]
+	Parameter SB_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter SB_TRAS_TYPE bound to: 2 - type: integer 
+	Parameter SB_TRANS_SIZE bound to: 3 - type: integer 
+	Parameter SB_BURST_NUM bound to: 3 - type: integer 
+	Parameter SB_WDATA_WIDTH bound to: 32 - type: integer 
+	Parameter SB_RDATA_WIDTH bound to: 32 - type: integer 
+	Parameter SB_RESP_TYPE bound to: 2 - type: integer 
+	Parameter RESP_STATE_WIDTH bound to: 2 - type: integer 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter OKAY bound to: 2'b01 
+	Parameter ERROR bound to: 2'b10 
+	Parameter INCR bound to: 3'b001 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter STATE_WIDTH bound to: 4 - type: integer 
+	Parameter STATE_INIT_BUS_REQ bound to: 4'b0000 
+	Parameter STATE_WR_CONTRL bound to: 4'b0001 
+	Parameter STATE_WR_FINISH bound to: 4'b0010 
+	Parameter STATE_SPLIT_OCCUR bound to: 4'b0011 
+	Parameter STATE_INIT_BUS_RD_REQ bound to: 4'b0100 
+	Parameter STATE_RD_CONTRL bound to: 4'b0101 
+	Parameter STATE_RD_DATA bound to: 4'b0110 
+	Parameter STATE_RD_FINISH bound to: 4'b0111 
+	Parameter STATE_SPLIT_RDOCCUR bound to: 4'b1000 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:154]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:243]
+WARNING: [Synth 8-6014] Unused sequential element rd_data_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:266]
+INFO: [Synth 8-6155] done synthesizing module 'SBmaster1' (1#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:23]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[31]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[30]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[29]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[28]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[27]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[26]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[25]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[24]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[23]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[22]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[21]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[20]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[19]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[18]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[17]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[16]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[15]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[14]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[13]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[12]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[11]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[10]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[9]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[8]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[7]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[6]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[5]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[4]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[3]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[2]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[1]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 413.262 ; gain = 154.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 413.262 ; gain = 154.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbg676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 413.262 ; gain = 154.199
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbg676-1
+INFO: [Synth 8-802] inferred FSM for state register 'wr_state_reg' in module 'SBmaster1'
+INFO: [Synth 8-802] inferred FSM for state register 'rd_state_reg' in module 'SBmaster1'
+INFO: [Synth 8-5544] ROM "beat_counter" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "beat_counter" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sb_trans_m1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sb_busreq_m1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wr_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wr_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wr_state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wr_state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sb_trans_m1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sb_busreq_m1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rd_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rd_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rd_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+      STATE_INIT_BUS_REQ |                               00 |                             0000
+         STATE_WR_CONTRL |                               01 |                             0001
+         STATE_WR_FINISH |                               10 |                             0010
+       STATE_SPLIT_OCCUR |                               11 |                             0011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wr_state_reg' using encoding 'sequential' in module 'SBmaster1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+   STATE_INIT_BUS_RD_REQ |                              000 |                             0100
+         STATE_RD_CONTRL |                              001 |                             0101
+           STATE_RD_DATA |                              010 |                             0110
+     STATE_SPLIT_RDOCCUR |                              011 |                             1000
+         STATE_RD_FINISH |                              100 |                             0111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rd_state_reg' using encoding 'sequential' in module 'SBmaster1'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 413.262 ; gain = 154.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   4 Input     32 Bit        Muxes := 2     
+	   5 Input     32 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 18    
+	   4 Input      3 Bit        Muxes := 3     
+	   5 Input      3 Bit        Muxes := 5     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	  12 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   6 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 8     
+	   5 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module SBmaster1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   4 Input     32 Bit        Muxes := 2     
+	   5 Input     32 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 18    
+	   4 Input      3 Bit        Muxes := 3     
+	   5 Input      3 Bit        Muxes := 5     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	  12 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   6 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 8     
+	   5 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[31]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[30]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[29]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[28]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[27]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[26]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[25]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[24]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[23]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[22]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[21]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[20]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[19]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[18]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[17]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[16]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[15]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[14]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[13]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[12]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[11]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[10]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[9]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[8]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[7]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[6]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[5]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[4]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[3]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[2]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[1]
+WARNING: [Synth 8-3331] design SBmaster1 has unconnected port sb_rdata_m1[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (sb_lock_m1_reg)
+WARNING: [Synth 8-3332] Sequential element (sb_burst_m1_reg[2]) is unused and will be removed from module SBmaster1.
+WARNING: [Synth 8-3332] Sequential element (sb_burst_m1_reg[1]) is unused and will be removed from module SBmaster1.
+WARNING: [Synth 8-3332] Sequential element (sb_burst_m1_reg[2]__0) is unused and will be removed from module SBmaster1.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'sb_burst_m1_reg[2]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:147]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:147]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:147]
+WARNING: [Synth 8-3332] Sequential element (sb_burst_m1_reg[1]__0) is unused and will be removed from module SBmaster1.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'sb_burst_m1_reg[1]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:147]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:147]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:147]
+WARNING: [Synth 8-3332] Sequential element (sb_lock_m1_reg) is unused and will be removed from module SBmaster1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 550.406 ; gain = 291.344
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 550.406 ; gain = 291.344
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 551.801 ; gain = 292.738
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 551.801 ; gain = 292.738
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_busreq_m1_OBUF with 1st driver pin 'sb_busreq_m1_reg__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:141]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_busreq_m1_OBUF with 2nd driver pin 'sb_busreq_m1_reg/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:245]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_trans_m1_OBUF[1] with 1st driver pin 'sb_trans_m1_reg[1]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:143]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_trans_m1_OBUF[1] with 2nd driver pin 'sb_trans_m1_reg[1]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:288]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_trans_m1_OBUF[0] with 1st driver pin 'sb_trans_m1_reg[0]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:143]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_trans_m1_OBUF[0] with 2nd driver pin 'sb_trans_m1_reg[0]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:288]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[31] with 1st driver pin 'sb_addr_m1_reg[31]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[31] with 2nd driver pin 'sb_addr_m1_reg[31]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[30] with 1st driver pin 'sb_addr_m1_reg[30]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[30] with 2nd driver pin 'sb_addr_m1_reg[30]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[29] with 1st driver pin 'sb_addr_m1_reg[29]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[29] with 2nd driver pin 'sb_addr_m1_reg[29]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[28] with 1st driver pin 'sb_addr_m1_reg[28]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[28] with 2nd driver pin 'sb_addr_m1_reg[28]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[27] with 1st driver pin 'sb_addr_m1_reg[27]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[27] with 2nd driver pin 'sb_addr_m1_reg[27]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[26] with 1st driver pin 'sb_addr_m1_reg[26]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[26] with 2nd driver pin 'sb_addr_m1_reg[26]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[25] with 1st driver pin 'sb_addr_m1_reg[25]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[25] with 2nd driver pin 'sb_addr_m1_reg[25]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[24] with 1st driver pin 'sb_addr_m1_reg[24]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[24] with 2nd driver pin 'sb_addr_m1_reg[24]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[23] with 1st driver pin 'sb_addr_m1_reg[23]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[23] with 2nd driver pin 'sb_addr_m1_reg[23]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[22] with 1st driver pin 'sb_addr_m1_reg[22]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[22] with 2nd driver pin 'sb_addr_m1_reg[22]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[21] with 1st driver pin 'sb_addr_m1_reg[21]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[21] with 2nd driver pin 'sb_addr_m1_reg[21]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[20] with 1st driver pin 'sb_addr_m1_reg[20]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[20] with 2nd driver pin 'sb_addr_m1_reg[20]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[19] with 1st driver pin 'sb_addr_m1_reg[19]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[19] with 2nd driver pin 'sb_addr_m1_reg[19]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[18] with 1st driver pin 'sb_addr_m1_reg[18]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[18] with 2nd driver pin 'sb_addr_m1_reg[18]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[17] with 1st driver pin 'sb_addr_m1_reg[17]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[17] with 2nd driver pin 'sb_addr_m1_reg[17]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[16] with 1st driver pin 'sb_addr_m1_reg[16]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[16] with 2nd driver pin 'sb_addr_m1_reg[16]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[15] with 1st driver pin 'sb_addr_m1_reg[15]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[15] with 2nd driver pin 'sb_addr_m1_reg[15]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[14] with 1st driver pin 'sb_addr_m1_reg[14]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[14] with 2nd driver pin 'sb_addr_m1_reg[14]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[13] with 1st driver pin 'sb_addr_m1_reg[13]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[13] with 2nd driver pin 'sb_addr_m1_reg[13]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[12] with 1st driver pin 'sb_addr_m1_reg[12]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[12] with 2nd driver pin 'sb_addr_m1_reg[12]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[11] with 1st driver pin 'sb_addr_m1_reg[11]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[11] with 2nd driver pin 'sb_addr_m1_reg[11]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[10] with 1st driver pin 'sb_addr_m1_reg[10]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[10] with 2nd driver pin 'sb_addr_m1_reg[10]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[9] with 1st driver pin 'sb_addr_m1_reg[9]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[9] with 2nd driver pin 'sb_addr_m1_reg[9]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[8] with 1st driver pin 'sb_addr_m1_reg[8]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[8] with 2nd driver pin 'sb_addr_m1_reg[8]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[7] with 1st driver pin 'sb_addr_m1_reg[7]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[7] with 2nd driver pin 'sb_addr_m1_reg[7]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[6] with 1st driver pin 'sb_addr_m1_reg[6]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[6] with 2nd driver pin 'sb_addr_m1_reg[6]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[5] with 1st driver pin 'sb_addr_m1_reg[5]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[5] with 2nd driver pin 'sb_addr_m1_reg[5]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[4] with 1st driver pin 'sb_addr_m1_reg[4]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[4] with 2nd driver pin 'sb_addr_m1_reg[4]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[3] with 1st driver pin 'sb_addr_m1_reg[3]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[3] with 2nd driver pin 'sb_addr_m1_reg[3]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[2] with 1st driver pin 'sb_addr_m1_reg[2]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[2] with 2nd driver pin 'sb_addr_m1_reg[2]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[1] with 1st driver pin 'sb_addr_m1_reg[1]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[1] with 2nd driver pin 'sb_addr_m1_reg[1]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[0] with 1st driver pin 'sb_addr_m1_reg[0]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:248]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_addr_m1_OBUF[0] with 2nd driver pin 'sb_addr_m1_reg[0]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:144]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_write_m1_OBUF with 1st driver pin 'sb_write_m1_reg__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:145]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_write_m1_OBUF with 2nd driver pin 'sb_write_m1_reg/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:257]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_size_m1_OBUF[2] with 1st driver pin 'sb_size_m1_reg[2]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:258]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_size_m1_OBUF[2] with 2nd driver pin 'sb_size_m1_reg[2]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:146]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_size_m1_OBUF[1] with 1st driver pin 'sb_size_m1_reg[1]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:258]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_size_m1_OBUF[1] with 2nd driver pin 'sb_size_m1_reg[1]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:146]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_size_m1_OBUF[0] with 1st driver pin 'sb_size_m1_reg[0]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:258]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_size_m1_OBUF[0] with 2nd driver pin 'sb_size_m1_reg[0]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:146]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_burst_m1_OBUF[0] with 1st driver pin 'sb_burst_m1_reg[0]__0/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:147]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net sb_burst_m1_OBUF[0] with 2nd driver pin 'sb_burst_m1_reg[0]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/BUS/SBmaster1.v:259]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|       40|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 551.801 ; gain = 292.738
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 551.801 ; gain = 292.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 551.801 ; gain = 292.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 551.801 ; gain = 292.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 551.801 ; gain = 292.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     3|
+|3     |LUT2 |     6|
+|4     |LUT3 |    14|
+|5     |LUT4 |     2|
+|6     |LUT5 |    72|
+|7     |LUT6 |    33|
+|8     |FDRE |   128|
+|9     |FDSE |     1|
+|10    |IBUF |    78|
+|11    |OBUF |    76|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   414|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 551.801 ; gain = 292.738
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 86 critical warnings and 70 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 551.801 ; gain = 292.738
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 551.801 ; gain = 292.738
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 78 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 70 Warnings, 86 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 650.969 ; gain = 404.727
+INFO: [Common 17-1381] The checkpoint 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/synth_1/SBmaster1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file SBmaster1_utilization_synth.rpt -pb SBmaster1_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.109 . Memory (MB): peak = 650.969 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 12 21:01:04 2018...
