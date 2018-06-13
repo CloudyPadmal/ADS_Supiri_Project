@@ -359,7 +359,6 @@ module SBslave1(
 							premaster1_currentbeat_count <= current_num_beat;
 							premaster1_holdaddress <= badder;
 							slave_state <= STATE_INIT_SLAVE;
-							
 						end
 						else begin
 						    sb_split_s1 <= 2'b10;

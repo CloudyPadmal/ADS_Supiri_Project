@@ -16,7 +16,7 @@
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
-// 
+// Reference: https://pdfs.semanticscholar.org/62bf/b6722ab1b7b0bb900aed2a870162bc11eca4.pdf
 //////////////////////////////////////////////////////////////////////////////////
 
 
@@ -30,13 +30,13 @@ module Arbiter(
     input HLOCKx,
     output reg HGRANT1,
     output reg HGRANT2,
-    output reg [1:0] HMASTER//,
+    output reg [1:0] HMASTER,
+    output reg HMASTLOCK
     //input [1:0] HTRANS,
     //input [2:0] HBURST,
     //input [1:0] HRESP,
     //input [13:0] HADDR,
-    //output reg HMASTLOCK
-    );
+);
     
     localparam NORMAL_STATE = 0;
     localparam LOCKED_STATE = 1;
@@ -56,7 +56,7 @@ module Arbiter(
     end
     
     always @ (posedge HCLK or negedge HRESETn) begin
-        if (HRESETn == 1'b0)
+        if (!HRESETn)
             begin
                 HGRANT1 <= 1'b0;
                 HGRANT2 <= 1'b0;
