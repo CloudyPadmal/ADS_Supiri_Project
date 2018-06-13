@@ -59,6 +59,18 @@ module MasterA(
         else begin
             case (MASTER_STATE)
                 INITIATE_BUS_REQUEST: begin
+                ///////////////
+                    if (RW == 1) begin //First Check Write Enable given
+                        HBUSREQx <= 1; //If enabled, request for grant
+                        if (HGRANTx) begin //When grant given
+                            HLOCKx = 1; //Lock it
+                            MASTER_STATE <= INITIATE_WRITE; //Go to write state
+                        end
+                        else MASTER_STATE <= INITIATE_BUS_REQUEST; //Otherwise wait for grant
+                    end
+                    else MASTER_STATE <= INITIATE_READ; //If rw is not enabled, go to read state
+                //////////////
+                /*
                     HBUSREQx <= 1;
                     if (HGRANTx) begin
                         HLOCKx = 1;
@@ -77,6 +89,7 @@ module MasterA(
                     else begin
                         MASTER_STATE <= INITIATE_BUS_REQUEST;
                     end
+                */
                 end
                 INITIATE_WRITE: begin
                     if (HREADY) begin
@@ -85,7 +98,7 @@ module MasterA(
                             HADDR <= INHADDR; //Test Bench input Address
                             HWDATA <= INHWDATA; //Test Bench input Data
                             MASTER_STATE <= INITIATE_BUS_REQUEST;
-                            WRITE_COMPLETE = 1;
+                            WRITE_COMPLETE <= 1;
                         end
                         else begin
                             if (HRESP == OKAY) begin
@@ -107,6 +120,8 @@ module MasterA(
                     end
                 end
                 INITIATE_READ: begin
+                    //if (RW) MASTER_STATE <= READ_DATA;
+                    //else if (HREADY) begin
                     if (HREADY) begin
                         //HWRITE <= 0;
                         HADDR <= INHADDR; //Test bench address

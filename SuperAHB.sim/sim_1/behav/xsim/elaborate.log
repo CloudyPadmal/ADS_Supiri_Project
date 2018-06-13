@@ -1,13 +1,19 @@
 Vivado Simulator 2018.1
 Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
-Running: D:/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto f81f935f6c124af098a510bcb63b1fa4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Arbiter_Sim_behav xil_defaultlib.Arbiter_Sim xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto f81f935f6c124af098a510bcb63b1fa4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_Test_behav xil_defaultlib.Top_Test xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 1 for port HREADY [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:153]
+WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 1 for port HREADY [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:174]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.Arbiter
-Compiling module xil_defaultlib.Arbiter_Sim
+Compiling module xil_defaultlib.Decoder
+Compiling module xil_defaultlib.SlaveA
+Compiling module xil_defaultlib.MasterA
+Compiling module xil_defaultlib.TopLevel
+Compiling module xil_defaultlib.Top_Test
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot Arbiter_Sim_behav
+Built simulation snapshot Top_Test_behav
