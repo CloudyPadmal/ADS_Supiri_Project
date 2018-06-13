@@ -1,0 +1,524 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed Jun 13 18:25:48 2018
+# Process ID: 2900
+# Current directory: C:/Users/hp/Desktop/ADSProject1/SuperAHB
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1292 C:\Users\hp\Desktop\ADSProject1\SuperAHB\SuperAHB.xpr
+# Log file: C:/Users/hp/Desktop/ADSProject1/SuperAHB/vivado.log
+# Journal file: C:/Users/hp/Desktop/ADSProject1/SuperAHB\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 721.844 ; gain = 98.102
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 13 18:27:24 2018...
+cs/sources_1/new/Arbiter.v
+WARNING: [filemgmt 56-12] File 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v' cannot be added to the project because it already exists in the project, skipping this file
+add_files -norecurse C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v
+WARNING: [filemgmt 56-12] File 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v' cannot be added to the project because it already exists in the project, skipping this file
+add_files -norecurse C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v
+WARNING: [filemgmt 56-12] File 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v' cannot be added to the project because it already exists in the project, skipping this file
+set_property top Arbiter_Sim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Jun 13 18:42:48 2018] Launched synth_1...
+Run output will be captured here: C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/synth_1/runme.log
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Arbiter_Sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Arbiter_Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Arbiter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Arbiter_Sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto f81f935f6c124af098a510bcb63b1fa4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Arbiter_Sim_behav xil_defaultlib.Arbiter_Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Arbiter
+Compiling module xil_defaultlib.Arbiter_Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Arbiter_Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Arbiter_Sim_behav -key {Behavioral:sim_1:Functional:Arbiter_Sim} -tclbatch {Arbiter_Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+source Arbiter_Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 6 ns : File "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" Line 41
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Arbiter_Sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 857.086 ; gain = 5.125
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Arbiter_Sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Arbiter_Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Arbiter_Sim
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto f81f935f6c124af098a510bcb63b1fa4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Arbiter_Sim_behav xil_defaultlib.Arbiter_Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Arbiter
+Compiling module xil_defaultlib.Arbiter_Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Arbiter_Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+$finish called at time : 6 ns : File "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" Line 41
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 870.527 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Arbiter_Sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Arbiter_Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Arbiter
+ERROR: [VRFC 10-1280] procedural assignment to a non-register HLOCKx is not permitted, left-hand side should be reg/integer/time/genvar [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:46]
+ERROR: [VRFC 10-2787] module Arbiter ignored due to previous errors [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Arbiter_Sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Arbiter_Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Arbiter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Arbiter_Sim
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 870.527 ; gain = 0.000
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto f81f935f6c124af098a510bcb63b1fa4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Arbiter_Sim_behav xil_defaultlib.Arbiter_Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Arbiter
+Compiling module xil_defaultlib.Arbiter_Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Arbiter_Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+$finish called at time : 6 ns : File "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" Line 46
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 870.527 ; gain = 0.000
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Arbiter_Sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Arbiter_Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Arbiter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Arbiter_Sim
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto f81f935f6c124af098a510bcb63b1fa4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Arbiter_Sim_behav xil_defaultlib.Arbiter_Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Arbiter
+Compiling module xil_defaultlib.Arbiter_Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Arbiter_Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+$finish called at time : 18 ns : File "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" Line 47
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 873.820 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/synth_1
+
+launch_runs synth_1 -jobs 2
+[Wed Jun 13 19:02:58 2018] Launched synth_1...
+Run output will be captured here: C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Arbiter_Sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Arbiter_Sim_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto f81f935f6c124af098a510bcb63b1fa4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Arbiter_Sim_behav xil_defaultlib.Arbiter_Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Arbiter_Sim_behav -key {Behavioral:sim_1:Functional:Arbiter_Sim} -tclbatch {Arbiter_Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+source Arbiter_Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 18 ns : File "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" Line 47
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Arbiter_Sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 873.824 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Arbiter_Sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Arbiter_Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Arbiter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Arbiter_Sim
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto f81f935f6c124af098a510bcb63b1fa4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Arbiter_Sim_behav xil_defaultlib.Arbiter_Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Arbiter
+Compiling module xil_defaultlib.Arbiter_Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Arbiter_Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+$finish called at time : 18 ns : File "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" Line 47
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 876.859 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Arbiter_Sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Arbiter_Sim_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto f81f935f6c124af098a510bcb63b1fa4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Arbiter_Sim_behav xil_defaultlib.Arbiter_Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+$finish called at time : 18 ns : File "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" Line 47
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 878.879 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Arbiter_Sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Arbiter_Sim_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto f81f935f6c124af098a510bcb63b1fa4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Arbiter_Sim_behav xil_defaultlib.Arbiter_Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+$finish called at time : 18 ns : File "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" Line 47
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 879.930 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Arbiter_Sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Arbiter_Sim_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto f81f935f6c124af098a510bcb63b1fa4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Arbiter_Sim_behav xil_defaultlib.Arbiter_Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+$finish called at time : 18 ns : File "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" Line 47
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 879.930 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Arbiter_Sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Arbiter_Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Arbiter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Arbiter_Sim
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto f81f935f6c124af098a510bcb63b1fa4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Arbiter_Sim_behav xil_defaultlib.Arbiter_Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Arbiter
+Compiling module xil_defaultlib.Arbiter_Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Arbiter_Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+$finish called at time : 30 ns : File "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" Line 52
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 879.930 ; gain = 0.000
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Arbiter_Sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Arbiter_Sim_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto f81f935f6c124af098a510bcb63b1fa4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Arbiter_Sim_behav xil_defaultlib.Arbiter_Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+$finish called at time : 30 ns : File "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" Line 52
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 879.930 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Arbiter_Sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Arbiter_Sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Arbiter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Arbiter_Sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto f81f935f6c124af098a510bcb63b1fa4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Arbiter_Sim_behav xil_defaultlib.Arbiter_Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Arbiter
+Compiling module xil_defaultlib.Arbiter_Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Arbiter_Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+$finish called at time : 30 ns : File "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" Line 52
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 879.930 ; gain = 0.000
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Slave.v w ]
+add_files -fileset sim_1 C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Slave.v
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/slave_tb.v w ]
+add_files -fileset sim_1 C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/slave_tb.v
+update_compile_order -fileset sim_1
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Arbiter_Sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Arbiter_Sim_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto f81f935f6c124af098a510bcb63b1fa4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Arbiter_Sim_behav xil_defaultlib.Arbiter_Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+$finish called at time : 30 ns : File "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" Line 52
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 886.273 ; gain = 0.000
+set_property top Top_Test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 13 20:52:14 2018...
