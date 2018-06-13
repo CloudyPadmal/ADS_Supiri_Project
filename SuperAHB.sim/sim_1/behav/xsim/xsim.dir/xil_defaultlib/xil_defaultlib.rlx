@@ -7,6 +7,6 @@ C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v,1
 C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Top_Test.v,1528892061,verilog,,,,Top_Test,,,,,,,,
 C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v,1528896407,verilog,,C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v,,Arbiter,,,,,,,,
 C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v,1528890734,verilog,,C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v,,Decoder;Decoder_tb,,,,,,,,
-C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v,1528885785,verilog,,C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v,,MasterA,,,,,,,,
+C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v,1528901379,verilog,,C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v,,MasterA,,,,,,,,
 C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v,1528893473,verilog,,C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v,,SlaveA,,,,,,,,
 C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v,1528890890,verilog,,C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Top_Test.v,,TopLevel,,,,,,,,

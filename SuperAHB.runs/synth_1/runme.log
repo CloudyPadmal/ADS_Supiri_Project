@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6196 
+INFO: Helper process launched with PID 9632 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 358.832 ; gain = 99.543
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 359.406 ; gain = 100.426
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:35]
@@ -94,19 +94,19 @@ WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[1]
 WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[0]
 WARNING: [Synth 8-3331] design Arbiter has unconnected port HMASTLOCK
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 413.727 ; gain = 154.438
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 413.863 ; gain = 154.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 413.727 ; gain = 154.438
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 413.863 ; gain = 154.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k70tfbg676-1
----------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 413.727 ; gain = 154.438
----------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7k70tfbg676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 413.863 ; gain = 154.883
+---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "HGRANT1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "HGRANT1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "HGRANT1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -125,9 +125,7 @@ INFO: [Synth 8-5544] ROM "SLAVE_STATE" won't be mapped to Block RAM because addr
 INFO: [Synth 8-5544] ROM "SLAVE_STATE" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-802] inferred FSM for state register 'MASTER_STATE_reg' in module 'MasterA'
 INFO: [Synth 8-5544] ROM "WRITE_COMPLETE" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "HBUSREQx" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "HTRANS" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "MASTER_STATE" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "MASTER_STATE" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "MASTER_STATE" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "MASTER_STATE" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -167,7 +165,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'HADDR_MUX_OUT_reg' [C:/User
 WARNING: [Synth 8-327] inferring latch for variable 'HWDATA_MUX_OUT_reg' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:37]
 WARNING: [Synth 8-327] inferring latch for variable 'HRDATA_reg' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:49]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 426.680 ; gain = 167.391
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 422.711 ; gain = 163.730
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -203,11 +201,11 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit        Muxes := 17    
 	  10 Input      2 Bit        Muxes := 6     
 	   8 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 45    
+	   2 Input      1 Bit        Muxes := 53    
 	   5 Input      1 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 4     
 	  10 Input      1 Bit        Muxes := 21    
-	   8 Input      1 Bit        Muxes := 24    
+	   8 Input      1 Bit        Muxes := 28    
 	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -273,8 +271,8 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 13    
 	   8 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 9     
-	   8 Input      1 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 13    
+	   8 Input      1 Bit        Muxes := 14    
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -302,7 +300,7 @@ INFO: [Synth 8-3886] merging instance 'SlaveA:/HRESP_reg[0]' (FDE) to 'SlaveA:/H
 INFO: [Synth 8-3886] merging instance 'SupiriArbiter/HGRANT2_reg' (FDCE) to 'SupiriArbiter/HMASTER_reg[0]'
 INFO: [Synth 8-3886] merging instance 'SupiriArbiter/HGRANT1_reg' (FDCE) to 'SupiriArbiter/HMASTER_reg[1]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 575.355 ; gain = 316.066
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 573.656 ; gain = 314.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -315,7 +313,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 575.355 ; gain = 316.066
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 573.656 ; gain = 314.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -327,7 +325,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 575.355 ; gain = 316.066
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 573.656 ; gain = 314.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -351,7 +349,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 575.355 ; gain = 316.066
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 573.656 ; gain = 314.676
 ---------------------------------------------------------------------------------
 CRITICAL WARNING: [Synth 8-3352] multi-driven net BUS_REQ_2_IBUF with 1st driver pin 'BUS_REQ_2_IBUF_inst/O' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
 CRITICAL WARNING: [Synth 8-3352] multi-driven net BUS_REQ_2_IBUF with 2nd driver pin 'Master_BINTERFACE/HBUSREQx_reg/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:54]
@@ -381,7 +379,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 575.355 ; gain = 316.066
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 573.656 ; gain = 314.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -393,25 +391,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 575.355 ; gain = 316.066
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 573.656 ; gain = 314.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 575.355 ; gain = 316.066
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 573.656 ; gain = 314.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 575.355 ; gain = 316.066
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 573.656 ; gain = 314.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 575.355 ; gain = 316.066
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 573.656 ; gain = 314.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -432,8 +430,8 @@ Report Cell Usage:
 |3     |LUT2 |   136|
 |4     |LUT3 |   287|
 |5     |LUT4 |    20|
-|6     |LUT5 |    46|
-|7     |LUT6 |    42|
+|6     |LUT5 |    44|
+|7     |LUT6 |    44|
 |8     |FDCE |     2|
 |9     |FDRE |   430|
 |10    |FDSE |     3|
@@ -456,14 +454,14 @@ Report Instance Areas:
 |8     |  SupiriDecoder     |Decoder   |     6|
 +------+--------------------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 575.355 ; gain = 316.066
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 573.656 ; gain = 314.676
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 17 critical warnings and 33 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 575.355 ; gain = 316.066
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 575.355 ; gain = 316.066
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 573.656 ; gain = 314.676
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 573.656 ; gain = 314.676
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 271 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -471,10 +469,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LD => LDCE: 78 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-57 Infos, 33 Warnings, 17 Critical Warnings and 0 Errors encountered.
+55 Infos, 33 Warnings, 17 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 655.168 ; gain = 409.098
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 655.398 ; gain = 409.430
 INFO: [Common 17-1381] The checkpoint 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/synth_1/TopLevel.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file TopLevel_utilization_synth.rpt -pb TopLevel_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 655.168 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Jun 13 20:54:16 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.152 . Memory (MB): peak = 655.398 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 13 21:13:57 2018...
