@@ -1,0 +1,486 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed Jun 13 17:43:22 2018
+# Process ID: 1140
+# Current directory: C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/synth_1
+# Command line: vivado.exe -log TopLevel.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TopLevel.tcl
+# Log file: C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/synth_1/TopLevel.vds
+# Journal file: C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source TopLevel.tcl -notrace
+Command: synth_design -top TopLevel -part xc7k70tfbg676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8968 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 359.422 ; gain = 100.832
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:35]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:48]
+INFO: [Synth 8-6157] synthesizing module 'Arbiter' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:3]
+	Parameter NORMAL_STATE bound to: 0 - type: integer 
+	Parameter LOCKED_STATE bound to: 1 - type: integer 
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity Arbiter does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'Arbiter' (1#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:3]
+WARNING: [Synth 8-350] instance 'SupiriArbiter' of module 'Arbiter' requires 11 connections, but only 10 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Decoder' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Decoder' (2#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:3]
+INFO: [Synth 8-6157] synthesizing module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter LEAVE_ONE_CLOCK bound to: 4'b0000 
+	Parameter INITIATE_SLAVE bound to: 4'b0001 
+	Parameter INITIATE_WRITE_SLAVE bound to: 4'b0010 
+	Parameter INITIATE_READ_SLAVE bound to: 4'b0011 
+	Parameter WRITE_SLAVE bound to: 4'b0100 
+	Parameter READ_SLAVE bound to: 4'b0101 
+	Parameter SPLIT_WRITE_SLAVE bound to: 4'b0110 
+	Parameter SPLIT_READ_SLAVE bound to: 4'b0111 
+	Parameter WAIT_ANOTHER_WCLOCK bound to: 4'b1000 
+	Parameter WAIT_ANOTHER_RCLOCK bound to: 4'b1001 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:64]
+WARNING: [Synth 8-6014] Unused sequential element WRITE_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:52]
+WARNING: [Synth 8-6014] Unused sequential element READ_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'SlaveA' (3#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter INITIATE_BUS_REQUEST bound to: 3'b000 
+	Parameter INITIATE_WRITE bound to: 3'b001 
+	Parameter INITIATE_READ bound to: 3'b010 
+	Parameter WRITE_SPLIT bound to: 3'b011 
+	Parameter READ_SPLIT bound to: 3'b100 
+	Parameter READ_DATA bound to: 3'b101 
+	Parameter WRITE_FINISH bound to: 3'b110 
+	Parameter READ_FINISH bound to: 3'b111 
+INFO: [Synth 8-6155] done synthesizing module 'MasterA' (4#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+WARNING: [Synth 8-689] width (3) of port connection 'HREADY' does not match port width (1) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:153]
+WARNING: [Synth 8-6104] Input port 'BUS_REQ_1' has an internal driver [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:161]
+WARNING: [Synth 8-689] width (3) of port connection 'HREADY' does not match port width (1) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:174]
+WARNING: [Synth 8-6104] Input port 'BUS_REQ_2' has an internal driver [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:182]
+WARNING: [Synth 8-3848] Net HSIZE in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:25]
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'TopLevel' (5#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HMASTLOCK
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[13]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[12]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[11]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[10]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[9]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[8]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[7]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[6]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[5]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[4]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[3]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[2]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[0]
+WARNING: [Synth 8-3331] design Arbiter has unconnected port HMASTLOCK
+WARNING: [Synth 8-3331] design Arbiter has unconnected port HLOCKx
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 413.359 ; gain = 154.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 413.359 ; gain = 154.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbg676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 413.359 ; gain = 154.770
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbg676-1
+INFO: [Synth 8-5544] ROM "HGRANT1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "HGRANT1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "HGRANT1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "HGRANT2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "HGRANT2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "HMASTER" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "HMASTER" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'SLAVE_STATE_reg' in module 'SlaveA'
+INFO: [Synth 8-5544] ROM "HRESP" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "HRESP" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "HRESP" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "OUTHADDR" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "OUTHWDATA" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "SLAVE_STATE" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "SLAVE_STATE" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "SLAVE_STATE" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'MASTER_STATE_reg' in module 'MasterA'
+INFO: [Synth 8-5544] ROM "WRITE_COMPLETE" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "HBUSREQx" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "HTRANS" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "MASTER_STATE" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "MASTER_STATE" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "MASTER_STATE" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "MASTER_STATE" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "MASTER_STATE" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "MASTER_STATE" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "MASTER_STATE" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "MASTER_STATE" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+         LEAVE_ONE_CLOCK |                             0000 |                             0000
+          INITIATE_SLAVE |                             0001 |                             0001
+    INITIATE_WRITE_SLAVE |                             0010 |                             0010
+             WRITE_SLAVE |                             0011 |                             0100
+       SPLIT_WRITE_SLAVE |                             0100 |                             0110
+     WAIT_ANOTHER_WCLOCK |                             0101 |                             1000
+     INITIATE_READ_SLAVE |                             0110 |                             0011
+              READ_SLAVE |                             0111 |                             0101
+        SPLIT_READ_SLAVE |                             1000 |                             0111
+     WAIT_ANOTHER_RCLOCK |                             1001 |                             1001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'SLAVE_STATE_reg' using encoding 'sequential' in module 'SlaveA'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+    INITIATE_BUS_REQUEST |                              000 |                              000
+          INITIATE_WRITE |                              001 |                              001
+            WRITE_FINISH |                              010 |                              110
+             WRITE_SPLIT |                              011 |                              011
+           INITIATE_READ |                              100 |                              010
+               READ_DATA |                              101 |                              101
+             READ_FINISH |                              110 |                              111
+              READ_SPLIT |                              111 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'MASTER_STATE_reg' using encoding 'sequential' in module 'MasterA'
+WARNING: [Synth 8-327] inferring latch for variable 'HADDR_MUX_OUT_reg' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:38]
+WARNING: [Synth 8-327] inferring latch for variable 'HWDATA_MUX_OUT_reg' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:37]
+WARNING: [Synth 8-327] inferring latch for variable 'HRDATA_reg' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:49]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 425.742 ; gain = 167.152
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 10    
+	               14 Bit    Registers := 5     
+	                2 Bit    Registers := 9     
+	                1 Bit    Registers := 19    
++---Muxes : 
+	  10 Input     32 Bit        Muxes := 6     
+	   2 Input     32 Bit        Muxes := 24    
+	   8 Input     32 Bit        Muxes := 4     
+	   3 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	  10 Input     14 Bit        Muxes := 3     
+	   2 Input     14 Bit        Muxes := 14    
+	   8 Input     14 Bit        Muxes := 2     
+	   3 Input     14 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 9     
+	   8 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 26    
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 17    
+	  10 Input      2 Bit        Muxes := 6     
+	   8 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 45    
+	   5 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 4     
+	  10 Input      1 Bit        Muxes := 21    
+	   8 Input      1 Bit        Muxes := 24    
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module TopLevel 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	   3 Input     14 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module Arbiter 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 2     
+Module Decoder 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 3     
+Module SlaveA 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               14 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	  10 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 4     
+	  10 Input     14 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 2     
+	  10 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 5     
+	  10 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 8     
+	  10 Input      1 Bit        Muxes := 7     
+Module MasterA 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               14 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   8 Input     32 Bit        Muxes := 2     
+	   2 Input     14 Bit        Muxes := 4     
+	   8 Input     14 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 13    
+	   8 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   8 Input      1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HMASTLOCK
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[13]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[12]
+WARNING: [Synth 8-3331] design Arbiter has unconnected port HMASTLOCK
+WARNING: [Synth 8-3331] design Arbiter has unconnected port HLOCKx
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SupiriArbiter/CURRENT_STATE_reg)
+INFO: [Synth 8-3886] merging instance 'MasterA:/HTRANS_reg[0]' (FDE) to 'MasterA:/HTRANS_reg[1]'
+INFO: [Synth 8-3886] merging instance 'SlaveA:/OUTHADDR_reg[12]' (FDE) to 'SlaveA:/OUTHADDR_reg[13]'
+INFO: [Synth 8-3886] merging instance 'SlaveA:/HRESP_reg[0]' (FDE) to 'SlaveA:/HRESP_reg[1]'
+WARNING: [Synth 8-3332] Sequential element (CURRENT_STATE_reg) is unused and will be removed from module Arbiter.
+WARNING: [Synth 8-3332] Sequential element (HLOCKx_reg) is unused and will be removed from module MasterA.
+INFO: [Synth 8-3886] merging instance 'SupiriArbiter/HGRANT2_reg' (FDCE) to 'SupiriArbiter/HMASTER_reg[0]'
+INFO: [Synth 8-3886] merging instance 'SupiriArbiter/HGRANT1_reg' (FDCE) to 'SupiriArbiter/HMASTER_reg[1]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 576.012 ; gain = 317.422
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 576.012 ; gain = 317.422
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 576.012 ; gain = 317.422
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 576.012 ; gain = 317.422
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net BUS_REQ_2_IBUF with 1st driver pin 'BUS_REQ_2_IBUF_inst/O' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net BUS_REQ_2_IBUF with 2nd driver pin 'Master_BINTERFACE/HBUSREQx_reg/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net BUS_REQ_1_IBUF with 1st driver pin 'BUS_REQ_1_IBUF_inst/O' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net BUS_REQ_1_IBUF with 2nd driver pin 'Master_AINTERFACE/HBUSREQx_reg/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net HSPLIT[0] with 1st driver pin 'Slave_CINTERFACE/HSPLITx_reg[0]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net HSPLIT[0] with 2nd driver pin 'Slave_BINTERFACE/HSPLITx_reg[0]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net HSPLIT[0] with 3rd driver pin 'Slave_AINTERFACE/HSPLITx_reg[0]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net HSPLIT[1] with 1st driver pin 'Slave_CINTERFACE/HSPLITx_reg[1]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net HSPLIT[1] with 2nd driver pin 'Slave_BINTERFACE/HSPLITx_reg[1]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net HSPLIT[1] with 3rd driver pin 'Slave_AINTERFACE/HSPLITx_reg[1]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net HWRITE with 1st driver pin 'Master_BINTERFACE/HWRITE_reg/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:52]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net HWRITE with 2nd driver pin 'Master_AINTERFACE/HWRITE_reg/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:52]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net HTRANS[0] with 1st driver pin 'Master_BINTERFACE/HTRANS_reg[1]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:53]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net HTRANS[0] with 2nd driver pin 'Master_AINTERFACE/HTRANS_reg[1]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:53]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net HRESP[0] with 1st driver pin 'Slave_CINTERFACE/HRESP_reg[1]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:56]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net HRESP[0] with 2nd driver pin 'Slave_BINTERFACE/HRESP_reg[1]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:56]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net HRESP[0] with 3rd driver pin 'Slave_AINTERFACE/HRESP_reg[1]/Q' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:56]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        7|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 576.012 ; gain = 317.422
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 576.012 ; gain = 317.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 576.012 ; gain = 317.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 576.012 ; gain = 317.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 576.012 ; gain = 317.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     3|
+|2     |LUT1 |     1|
+|3     |LUT2 |   135|
+|4     |LUT3 |   286|
+|5     |LUT4 |    19|
+|6     |LUT5 |    46|
+|7     |LUT6 |    42|
+|8     |FDCE |     2|
+|9     |FDRE |   427|
+|10    |FDSE |     3|
+|11    |LD   |    78|
+|12    |IBUF |   193|
+|13    |OBUF |   202|
++------+-----+------+
+
+Report Instance Areas: 
++------+--------------------+----------+------+
+|      |Instance            |Module    |Cells |
++------+--------------------+----------+------+
+|1     |top                 |          |  1437|
+|2     |  Master_AINTERFACE |MasterA   |   148|
+|3     |  Master_BINTERFACE |MasterA_0 |   226|
+|4     |  Slave_AINTERFACE  |SlaveA    |   179|
+|5     |  Slave_BINTERFACE  |SlaveA_1  |   181|
+|6     |  Slave_CINTERFACE  |SlaveA_2  |   212|
+|7     |  SupiriArbiter     |Arbiter   |     8|
+|8     |  SupiriDecoder     |Decoder   |     6|
++------+--------------------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 576.012 ; gain = 317.422
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 17 critical warnings and 37 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 576.012 ; gain = 317.422
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 576.012 ; gain = 317.422
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 271 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 78 instances were transformed.
+  LD => LDCE: 78 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+58 Infos, 37 Warnings, 17 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 661.191 ; gain = 415.422
+INFO: [Common 17-1381] The checkpoint 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/synth_1/TopLevel.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TopLevel_utilization_synth.rpt -pb TopLevel_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 661.191 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 13 17:44:00 2018...

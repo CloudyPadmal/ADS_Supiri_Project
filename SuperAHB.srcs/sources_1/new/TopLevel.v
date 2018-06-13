@@ -4,17 +4,20 @@ module TopLevel(
     input RW,
     input BUS_REQ_1,
     input BUS_REQ_2,
-    input [31:0] M1_IN,
-    input [31:0] M2_IN,
-    input [31:0] OUTHRDATA,
-    output [13:0] OUTHADDR,
-    output [31:0] OUTHWDATA,
+    input [31:0] OUTHRDATA_A, OUTHRDATA_B, OUTHRDATA_C,
+    output [13:0] ADDRESS_FROM_SLAVE_TO_US_A,
+    output [13:0] ADDRESS_FROM_SLAVE_TO_US_B,
+    output [13:0] ADDRESS_FROM_SLAVE_TO_US_C,
+    output [31:0] DATA_FROM_SLAVE_TO_US_A,
+    output [31:0] DATA_FROM_SLAVE_TO_US_B,
+    output [31:0] DATA_FROM_SLAVE_TO_US_C,
     output [31:0] DATA_FROM_SLAVE_TO_MASTER1,
     input [31:0] DATA_FROM_MASTER_TO_SLAVE1,
+    input [13:0] ADDRESS_FROM_US_TO_MASTER_TO_SLAVE1, // What we feed to master from test bench
     output [31:0] DATA_FROM_SLAVE_TO_MASTER2, // What we read from master, master got from slave
     input [31:0] DATA_FROM_MASTER_TO_SLAVE2, // What we feed to master from test bench
-    input [11:0] ADDRESS_FROM_US_TO_MASTER_TO_SLAVE1, // What we feed to master from test bench
-    input [11:0] ADDRESS_FROM_US_TO_MASTER_TO_SLAVE2 
+    input [13:0] ADDRESS_FROM_US_TO_MASTER_TO_SLAVE2
+    
 );
     
     wire GRANTED_1,GRANTED_2,HWRITE,HMASTLOCK,HLOCK_A,HLOCK_B;
@@ -26,6 +29,7 @@ module TopLevel(
     reg [31:0] HWDATA,HRDATA;
     reg [31:0] HWDATA_MUX_OUT;
     reg HLOCKx;
+  
     
     always @(*)begin
         case(HMASTER)
@@ -41,7 +45,7 @@ module TopLevel(
     end
     
     always @(*)begin
-    case(HADDR[13:12])
+    case(HADDR_MUX_OUT[13:12])
         2'b01: HRDATA <= HRDATA_A;
         2'b10: HRDATA <= HRDATA_B;
         2'b11: HRDATA <= HRDATA_C;
@@ -69,7 +73,7 @@ module TopLevel(
         );
         
     Decoder SupiriDecoder(
-        .HADDR(HADDR),
+        .HADDR(HADDR_MUX_OUT),
         .HCLK(CLK),
         .HRESETn(RST),
         .HSELx1(HSEL[0]),
@@ -94,9 +98,9 @@ module TopLevel(
         .HADDR(HADDR_MUX_OUT),
         .HWDATA(HWDATA_MUX_OUT),
         // Data from outside ports
-        .OUTHRDATA(OUTHRDATA),
-        .OUTHADDR(OUTHADDR),
-        .OUTHWDATA(OUTHWDATA)
+        .OUTHRDATA(OUTHRDATA_A),
+        .OUTHADDR(ADDRESS_FROM_SLAVE_TO_US_A),
+        .OUTHWDATA(DATA_FROM_SLAVE_TO_US_A)
     );
     
     SlaveA Slave_BINTERFACE(
@@ -116,9 +120,9 @@ module TopLevel(
         .HADDR(HADDR_MUX_OUT),
         .HWDATA(HWDATA_MUX_OUT),
         // Data from outside ports
-        .OUTHRDATA(OUTHRDATA),
-        .OUTHADDR(OUTHADDR),
-        .OUTHWDATA(OUTHWDATA)
+        .OUTHRDATA(OUTHRDATA_B),
+        .OUTHADDR(ADDRESS_FROM_SLAVE_TO_US_B),
+        .OUTHWDATA(DATA_FROM_SLAVE_TO_US_B)
     );
         
     SlaveA Slave_CINTERFACE(
@@ -138,9 +142,9 @@ module TopLevel(
         .HADDR(HADDR_MUX_OUT),
         .HWDATA(HWDATA_MUX_OUT),
         // Data from outside ports
-        .OUTHRDATA(OUTHRDATA),
-        .OUTHADDR(OUTHADDR),
-        .OUTHWDATA(OUTHWDATA)
+        .OUTHRDATA(OUTHRDATA_C),
+        .OUTHADDR(ADDRESS_FROM_SLAVE_TO_US_C),
+        .OUTHWDATA(DATA_FROM_SLAVE_TO_US_C)
     );
     
     

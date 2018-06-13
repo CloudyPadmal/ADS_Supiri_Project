@@ -32,3 +32,172 @@ refresh_design
 refresh_design
 refresh_design
 refresh_design
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Top_Test.v w ]
+add_files -fileset sim_1 C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Top_Test.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Top_Test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+refresh_design
+refresh_design
+refresh_design
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_simulation
+source Top_Test.tcl
+run all
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_simulation
+source Top_Test.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_simulation
+source Top_Test.tcl
+add_bp {C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v} 104
+remove_bps -file {C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v} -line 104
+close_sim
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_simulation
+source Top_Test.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_simulation
+source Top_Test.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_simulation
+source Top_Test.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_simulation
+source Top_Test.tcl
+close_sim
+launch_simulation
+source Top_Test.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_simulation
+source Top_Test.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_simulation
+source Top_Test.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_simulation
+source Top_Test.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_simulation
+source Top_Test.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_simulation
+source Top_Test.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_simulation
+source Top_Test.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_simulation
+source Top_Test.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_simulation
+source Top_Test.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+source Top_Test.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+add_bp {C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v} 38
+remove_bps -file {C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v} -line 38
+add_bp {C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v} 38
+remove_bps -file {C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v} -line 38
+relaunch_sim
+relaunch_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_simulation
+source Top_Test.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_simulation
+source Top_Test.tcl
+relaunch_sim
+add_bp {C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v} 51
+relaunch_sim
+run 10 us
+run 10 us
+run 1 ns
+run 1 ns
+relaunch_sim
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+remove_bps -file {C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v} -line 51
+add_bp {C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v} 51
+remove_bps -file {C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v} -line 51
+add_bp {C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v} 51
+remove_bps -file {C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v} -line 51
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim

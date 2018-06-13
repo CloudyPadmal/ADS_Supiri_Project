@@ -1,24 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 06/11/2018 03:07:19 PM
-// Design Name: 
-// Module Name: Arbiter
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// Reference: https://pdfs.semanticscholar.org/62bf/b6722ab1b7b0bb900aed2a870162bc11eca4.pdf
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module Arbiter(
     input HBUSREQx1,
@@ -44,6 +24,8 @@ module Arbiter(
     wire [1:0] BUSREQUEST;
     assign BUSREQUEST = {HBUSREQx1, HBUSREQx2};
     
+   
+
     reg CURRENT_STATE;
     
     always @ (negedge HCLK) begin

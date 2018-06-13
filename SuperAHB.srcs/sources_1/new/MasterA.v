@@ -16,7 +16,7 @@ module MasterA(
     // Data from inside ports
     output reg [31:0] INHRDATA,
     input [31:0] INHWDATA,
-    input [11:0] INHADDR
+    input [13:0] INHADDR
 );
 
     reg [2:0] MASTER_STATE;
@@ -48,6 +48,13 @@ module MasterA(
             MASTER_STATE <= INITIATE_BUS_REQUEST;
             WRITE_COMPLETE <= 0;
             READ_COMPLETE <= 0;
+            HLOCKx <= 0;
+            HWRITE <= 0;
+            HTRANS = IDLE;
+            HBUSREQx = 0;
+            HWDATA = 32'd0;
+            HADDR = 14'd0;
+            INHRDATA = 32'd0;            
         end
         else begin
             case (MASTER_STATE)

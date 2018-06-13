@@ -16,7 +16,7 @@ module SlaveA(
     input [31:0] HWDATA,
     // Data from outside ports
     input [31:0] OUTHRDATA,
-    output reg [11:0] OUTHADDR,
+    output reg [13:0] OUTHADDR,
     output reg [31:0] OUTHWDATA
 );
 
@@ -51,6 +51,12 @@ module SlaveA(
             SLAVE_STATE <= LEAVE_ONE_CLOCK;
             WRITE_COMPLETE <= 0;
             READ_COMPLETE <= 0;
+            HSPLITx <= 2'b00;
+            HREADY = 1;
+            HRESP = OKAY;
+            HRDATA = 32'd0;
+            OUTHADDR = 14'd0;
+            OUTHWDATA = 32'd0;
         end
         else begin
             if (HSELx) begin
