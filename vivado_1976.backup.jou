@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue Jun 12 20:56:20 2018
+# Process ID: 1976
+# Current directory: D:/Projects/Vivado/ADS_Project_I/ADS_Supiri_Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4160 D:\Projects\Vivado\ADS_Project_I\ADS_Supiri_Project\SuperAHB.xpr
+# Log file: D:/Projects/Vivado/ADS_Project_I/ADS_Supiri_Project/vivado.log
+# Journal file: D:/Projects/Vivado/ADS_Project_I/ADS_Supiri_Project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Projects/Vivado/ADS_Project_I/ADS_Supiri_Project/SuperAHB.xpr
+update_compile_order -fileset sources_1

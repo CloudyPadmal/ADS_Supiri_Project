@@ -1,5 +1,3 @@
-`timescale 1ns / 1ps
-
 module SlaveA(
     input HSELx,
     input HWRITE,
@@ -31,6 +29,11 @@ module SlaveA(
                 ERROR   = 2'b01,
                 RETRY   = 2'b10,
                 SPLIT   = 2'b11; // Response
+                
+    localparam  IDLE    = 2'b00,
+                BUSY    = 2'b01,
+                NONSEQ  = 2'b10,
+                SEQ     = 2'b11; // Transfer
                 
     localparam [3:0] LEAVE_ONE_CLOCK        = 0;
     localparam [3:0] INITIATE_SLAVE         = 1;
@@ -67,28 +70,25 @@ module SlaveA(
                         end
                     end
                     INITIATE_WRITE_SLAVE: begin
-                        OUTHWDATA <= HWDATA;
-                        HRESP = OKAY;
                         if (HSIZE == 0) begin
                             SLAVE_STATE <= WRITE_SLAVE;
                         end
                         else begin
                             SLAVE_STATE <= SPLIT_WRITE_SLAVE;
+                            HRESP <= SPLIT;
                         end
                     end
                     SPLIT_WRITE_SLAVE: begin
-                        if (HMASTER == 1) begin
+                        if (HMASTER == 1 && HTRANS == SEQ) begin
                             HSPLITx <= 1;
                             SLAVE_STATE <= WAIT_ANOTHER_WCLOCK;    
                         end
-                        else begin
+                        else if (HMASTER == 2 && HTRANS == SEQ) begin
                             HSPLITx = 2;
                             SLAVE_STATE <= WAIT_ANOTHER_WCLOCK;
                         end
                     end
                     INITIATE_READ_SLAVE: begin
-                        HRDATA <= OUTHRDATA;
-                        HRESP = OKAY;
                         if (HSIZE == 0) begin
                             SLAVE_STATE <= READ_SLAVE;
                         end
@@ -97,23 +97,21 @@ module SlaveA(
                         end
                     end
                     WRITE_SLAVE: begin
-                        if (!WRITE_COMPLETE) begin
-                            WRITE_COMPLETE = 1;
-                        end
-                        else begin
-                            WRITE_COMPLETE = 0;
-                            SLAVE_STATE <= INITIATE_SLAVE;
-                        end
+                        OUTHWDATA <= HWDATA;
+                        HRESP <= OKAY;
+                        SLAVE_STATE <= INITIATE_SLAVE;
                     end
                     READ_SLAVE: begin
-                        
+                        HRDATA <= OUTHRDATA;
+                        HRESP = OKAY;
+                        SLAVE_STATE <= INITIATE_SLAVE;
                     end
                     SPLIT_READ_SLAVE: begin
-                        if (HMASTER == 1) begin
+                        if (HMASTER == 1 && HTRANS == SEQ) begin
                             HSPLITx <= 1;
                             SLAVE_STATE <= WAIT_ANOTHER_RCLOCK;    
                         end
-                        else begin
+                        else if(HMASTER == 2 && HTRANS == SEQ) begin
                             HSPLITx = 2;
                             SLAVE_STATE <= WAIT_ANOTHER_RCLOCK;
                         end
