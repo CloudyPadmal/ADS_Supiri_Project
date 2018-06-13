@@ -1,25 +1,3 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 06/12/2018 04:53:58 PM
-// Design Name: 
-// Module Name: TopLevel
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
 module TopLevel(
     input CLK,
     input RST,
@@ -54,4 +32,127 @@ module TopLevel(
         .HMASTER(SEL_MASTER)//,
         //output reg HMASTLOCK
         );
+        
+    Decoder SupiriDecoder(
+        .HADDR(HADDR),
+        .HCLK(HCLK),
+        .HRESETn(HRESETn),
+        .HSELx1(HSELx1),
+        .HSELx2(HSELx2),
+        .HSELx3(HSELx3)
+    );
+    
+    SlaveA Slave_AINTERFACE(
+        .HSELx(HSELx),
+        .HWRITE(HWRITE),
+        .HTRANS(HTRANS),
+        .HSIZE(HSIZE),
+        .HBURST(HBURST),
+        .HRESETn(HRESETn),
+        .HCLK(HCLK),
+        .HMASTER(HMASTER),
+        .HMASTLOCK(HMASTLOCK),
+        .HSPLITx(HSPLITx),
+        .HREADY(HREADY),
+        .HRESP(HRESP),
+        // Data from inside ports
+        .HRDATA(HRDATA),
+        .HADDR(HADDR),
+        .HWDATA(HWDATA),
+        // Data from outside ports
+        .OUTHRDATA(OUTHRDATA),
+        .OUTHADDR(OUTHADDR),
+        .OUTHWDATA(OUTHWDATA)
+    );
+    
+    SlaveA Slave_BINTERFACE(
+        .HSELx(HSELx),
+        .HWRITE(HWRITE),
+        .HTRANS(HTRANS),
+        .HSIZE(HSIZE),
+        .HBURST(HBURST),
+        .HRESETn(HRESETn),
+        .HCLK(HCLK),
+        .HMASTER(HMASTER),
+        .HMASTLOCK(HMASTLOCK),
+        .HSPLITx(HSPLITx),
+        .HREADY(HREADY),
+        .HRESP(HRESP),
+        // Data from inside ports
+        .HRDATA(HRDATA),
+        .HADDR(HADDR),
+        .HWDATA(HWDATA),
+        // Data from outside ports
+        .OUTHRDATA(OUTHRDATA),
+        .OUTHADDR(OUTHADDR),
+        .OUTHWDATA(OUTHWDATA)
+    );
+        
+    SlaveA Slave_CINTERFACE(
+        .HSELx(HSELx),
+        .HWRITE(HWRITE),
+        .HTRANS(HTRANS),
+        .HSIZE(HSIZE),
+        .HBURST(HBURST),
+        .HRESETn(HRESETn),
+        .HCLK(HCLK),
+        .HMASTER(HMASTER),
+        .HMASTLOCK(HMASTLOCK),
+        .HSPLITx(HSPLITx),
+        .HREADY(HREADY),
+        .HRESP(HRESP),
+        // Data from inside ports
+        .HRDATA(HRDATA),
+        .HADDR(HADDR),
+        .HWDATA(HWDATA),
+        // Data from outside ports
+        .OUTHRDATA(OUTHRDATA),
+        .OUTHADDR(OUTHADDR),
+        .OUTHWDATA(OUTHWDATA)
+    );
+    
+    
+    MasterA Master_AINTERFACE(
+        .HGRANTx(HGRANTx),
+        .HREADY(HREADY),
+        .RW(RW),
+        .HRESP(HRESP),
+        .HRESETn(HRESETn),
+        .HCLK(HCLK),
+        .HLOCKx(HLOCKx),
+        .HWRITE(HWRITE),
+        .HTRANS(HTRANS),
+        .HBUSREQx(HBUSREQx),
+        // Data from outside ports
+        .HRDATA(HRDATA),
+        .HWDATA(HWDATA),
+        .HADDR(HADDR),
+        // Data from inside ports
+        .INHRDATA(INHRDATA),
+        .INHWDATA(INHWDATA),
+        .INHADDR(INHADDR)
+    );
+    
+     MasterA Master_BINTERFACE(
+        .HGRANTx(HGRANTx),
+        .HREADY(HREADY),
+        .RW(RW),
+        .HRESP(HRESP),
+        .HRESETn(HRESETn),
+        .HCLK(HCLK),
+        .HLOCKx(HLOCKx),
+        .HWRITE(HWRITE),
+        .HTRANS(HTRANS),
+        .HBUSREQx(HBUSREQx),
+        // Data from outside ports
+        .HRDATA(HRDATA),
+        .HWDATA(HWDATA),
+        .HADDR(HADDR),
+        // Data from inside ports
+        .INHRDATA(INHRDATA),
+        .INHWDATA(INHWDATA),
+        .INHADDR(INHADDR)
+    );
+    
+    
 endmodule

@@ -1,0 +1,553 @@
+/*
+
+Xilinx Vivado v2018.1 (64-bit) [Major: 2018, Minor: 1]
+SW Build: 2188600 on Wed Apr  4 18:40:38 MDT 2018
+IP Build: 2185939 on Wed Apr  4 20:55:05 MDT 2018
+
+Process ID: 11356
+License: Customer
+
+Current time: 	Wed Jun 13 12:22:27 IST 2018
+Time zone: 	India Standard Time (Asia/Colombo)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1536x864
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 204 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/Vivado/2018.1/tps/win64/jre
+Java executable location: 	D:/Vivado/2018.1/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	hp
+User home directory: C:/Users/hp
+User working directory: C:/Users/hp/Desktop/ADSProject1/SuperAHB
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Vivado
+HDI_APPROOT: D:/Vivado/2018.1
+RDI_DATADIR: D:/Vivado/2018.1/data
+RDI_BINDIR: D:/Vivado/2018.1/bin
+
+Vivado preferences file location: C:/Users/hp/AppData/Roaming/Xilinx/Vivado/2018.1/vivado.xml
+Vivado preferences directory: C:/Users/hp/AppData/Roaming/Xilinx/Vivado/2018.1/
+Vivado layouts directory: C:/Users/hp/AppData/Roaming/Xilinx/Vivado/2018.1/layouts
+PlanAhead jar file location: 	D:/Vivado/2018.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/hp/Desktop/ADSProject1/SuperAHB/vivado.log
+Vivado journal file location: 	C:/Users/hp/Desktop/ADSProject1/SuperAHB/vivado.jou
+Engine tmp dir: 	C:/Users/hp/Desktop/ADSProject1/SuperAHB/.Xil/Vivado-11356-DESKTOP-32FSOJU
+
+GUI allocated memory:	182 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 513 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// [GUI Memory]: 17 MB (+15595kb) [00:00:05]
+// [Engine Memory]: 292 MB (+154782kb) [00:00:05]
+// TclEventType: START_GUI
+// [GUI Memory]: 59 MB (+42557kb) [00:00:17]
+// [Engine Memory]: 503 MB (+205877kb) [00:00:17]
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bv (ch):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\hp\Desktop\ADSProject1\SuperAHB\SuperAHB.xpr. Version: Vivado v2018.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'D:/Projects/Vivado/ADS_Project_I/ADS_Supiri_Project' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2018.1/data/ip'. 
+// WARNING: HTimer (WrapperUtils Delayed Delete Timer) is taking too long to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 515 MB. GUI used memory: 35 MB. Current time: 6/13/18 12:22:29 PM IST
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 556 MB (+29039kb) [00:00:25]
+// [Engine Memory]: 589 MB (+5988kb) [00:00:28]
+// Project name: SuperAHB; location: C:/Users/hp/Desktop/ADSProject1/SuperAHB; part: xc7k70tfbg676-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 781.656 ; gain = 71.156 
+dismissDialog("Open Project"); // bv (ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_GENERATED
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 3000 ms.
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (Slave.v) elapsed time: 0.4s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Slave_tb (Slave.v)]", 3, true); // B (D, ch) - Node
+// [Engine Memory]: 622 MB (+3718kb) [00:00:38]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevel (TopLevel.v)]", 4, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Clock (Clock.v)]", 5, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Master (Master.v)]", 6, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MasterA (MasterA.v)]", 7, false); // B (D, ch)
+applyEnter(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, (String) null); // B (D, ch)
+// HMemoryUtils.trashcanNow. Engine heap size: 622 MB. GUI used memory: 39 MB. Current time: 6/13/18 12:22:49 PM IST
+// PAResourceOtoP.PAViews_PROJECT_SUMMARY: Project Summary: close view
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // D
+// Elapsed time: 27 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MasterA (MasterA.v)]", 7, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MasterA (MasterA.v)]", 7, false, false, false, false, false, true); // B (D, ch) - Double Click
+// [GUI Memory]: 62 MB (+483kb) [00:01:16]
+selectCodeEditor("MasterA.v", 331, 327); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SlaveA (SlaveA.v)]", 8, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, SlaveA (SlaveA.v)]", 8, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("SlaveA.v", 282, 66); // cd (w, ch)
+// [GUI Memory]: 67 MB (+1800kb) [00:01:42]
+// Elapsed time: 12 seconds
+selectButton(PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV, (String) null); // B (E, ch)
+// Run Command: PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ch)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ch): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_SIMULATION_SPECIFIC_HDL_FILES, "Add or create simulation sources"); // a (o, c)
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+// Elapsed time: 23 seconds
+selectButton("BACK", "< Back"); // JButton (j, c)
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_HDL_NETLIST_BLOCK_DESIGN, "Add or create design sources"); // a (o, c)
+// [GUI Memory]: 72 MB (+1873kb) [00:02:34]
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "TopD"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("CANCEL", "Cancel"); // JButton (j, c)
+// 'h' command handler elapsed time: 55 seconds
+dismissDialog("Add Sources"); // c (ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevel (TopLevel.v)]", 4, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevel (TopLevel.v)]", 4, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+selectCodeEditor("TopLevel.v", 602, 335); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 203, 195); // cd (w, ch)
+// [GUI Memory]: 77 MB (+1224kb) [00:03:00]
+selectCodeEditor("TopLevel.v", 193, 203); // cd (w, ch)
+// HMemoryUtils.trashcanNow. Engine heap size: 626 MB. GUI used memory: 43 MB. Current time: 6/13/18 12:59:34 PM IST
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// Elapsed time: 2077 seconds
+selectCodeEditor("TopLevel.v", 746, 242); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 746, 242, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("TopLevel.v", 253, 359); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 114, 485); // cd (w, ch)
+// Elapsed time: 14 seconds
+selectCodeEditor("TopLevel.v", 166, 232); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 54, 501); // cd (w, ch)
+// Elapsed time: 29 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Decoder_tb (Decoder.v)]", 1, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Decoder_tb (Decoder.v)]", 1, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+selectCodeEditor("Decoder.v", 38, 384); // cd (w, ch)
+typeControlKey((HResource) null, "Decoder.v", 'c'); // cd (w, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TopLevel.v", 2); // k (j, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 69, 468, true, false, false, false, false); // cd (w, ch) - Shift Key
+selectCodeEditor("TopLevel.v", 108, 430); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 199, 381, true, false, false, false, false); // cd (w, ch) - Shift Key
+selectCodeEditor("TopLevel.v", 181, 264); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 214, 336); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 226, 385); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 247, 263); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 207, 236); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 114, 236); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 91, 254); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("TopLevel.v", 153, 307); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 93, 307); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 97, 260); // cd (w, ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevel (TopLevel.v)]", 3, true); // B (D, ch) - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Decoder.v", 3); // k (j, ch)
+selectCodeEditor("Decoder.v", 103, 380); // cd (w, ch)
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TopLevel.v", 2); // k (j, ch)
+selectCodeEditor("TopLevel.v", 134, 383); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 101, 401); // cd (w, ch)
+// Elapsed time: 17 seconds
+selectCodeEditor("TopLevel.v", 94, 435); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 74, 404); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 42, 401); // cd (w, ch)
+// Elapsed time: 30 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SlaveA.v", 1); // k (j, ch)
+selectCodeEditor("SlaveA.v", 28, 29); // cd (w, ch)
+typeControlKey((HResource) null, "SlaveA.v", 'c'); // cd (w, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TopLevel.v", 2); // k (j, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 98, 196); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 98, 215); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 139, 231); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 141, 247); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 56, 263); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 98, 280); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 97, 296); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 141, 314); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 98, 332); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 174, 351); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 134, 364); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 175, 380); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 185, 416); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 148, 429); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 147, 452); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 147, 486); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 122, 187); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 130, 181); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 123, 176); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 179, 448); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 180, 467); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 142, 448); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 80, 152); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 80, 152, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 99, 151); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 98, 163); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 98, 163, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("TopLevel.v", 98, 163); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 98, 163); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 98, 163); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 109, 166); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 92, 162); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 92, 162, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 105, 164); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 90, 178); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 90, 178, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 106, 184); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 98, 195); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 103, 211); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 113, 232); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 94, 248); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 113, 260); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 126, 280); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 114, 298); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 106, 315); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 98, 327); // cd (w, ch)
+// [GUI Memory]: 87 MB (+6228kb) [00:42:04]
+selectCodeEditor("TopLevel.v", 103, 367); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 100, 383); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 104, 399); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 126, 430); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 118, 449); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 128, 467); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 77, 204); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 82, 189); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 82, 189, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 104, 195); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 86, 207); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 86, 207, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 113, 215); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 93, 226); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 93, 226, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 117, 231); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 82, 240); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 82, 240, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 96, 244); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 96, 265); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 96, 265, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 120, 267); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 99, 283); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 99, 283, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 134, 280); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 90, 295); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 90, 295, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 118, 298); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 87, 311); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 87, 311, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 110, 315); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 76, 340); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 82, 328); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 82, 328, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 101, 331); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 102, 331); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 87, 369); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 87, 369, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 110, 364); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 91, 376); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 91, 376, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 108, 387); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 90, 395); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 90, 395, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 110, 395); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 85, 433); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 85, 433, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 130, 433); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 78, 447); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 78, 447, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 125, 452); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 106, 461); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 106, 461, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 133, 470); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 203, 467); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 223, 451); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 250, 422); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("TopLevel.v", 52, 459); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 27, 211, true, false, false, false, false); // cd (w, ch) - Shift Key
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 91, 474); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 339, 188, false, false, false, true, false); // cd (w, ch) - Popup Trigger
+selectCodeEditor("TopLevel.v", 247, 203); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 109, 103); // cd (w, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SlaveA.v", 1); // k (j, ch)
+selectCodeEditor("SlaveA.v", 211, 295); // cd (w, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TopLevel.v", 2); // k (j, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Decoder.v", 3); // k (j, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TopLevel.v", 2); // k (j, ch)
+selectCodeEditor("TopLevel.v", 203, 375); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 127, 421); // cd (w, ch)
+// Elapsed time: 16 seconds
+selectCodeEditor("TopLevel.v", 84, 465); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 139, 131); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 54, 469); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 27, 114, true, false, false, false, false); // cd (w, ch) - Shift Key
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 69, 431); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 56, 165, true, false, false, false, false); // cd (w, ch) - Shift Key
+selectCodeEditor("TopLevel.v", 90, 228); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 86, 45, true, false, false, false, false); // cd (w, ch) - Shift Key
+selectCodeEditor("TopLevel.v", 86, 428); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 88, 469, true, false, false, false, false); // cd (w, ch) - Shift Key
+selectCodeEditor("TopLevel.v", 77, 112); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 127, 77); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 119, 79, true, false, false, false, false); // cd (w, ch) - Shift Key
+selectCodeEditor("TopLevel.v", 124, 415); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 55, 443); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MasterA.v", 0); // k (j, ch)
+// [GUI Memory]: 94 MB (+2699kb) [00:44:26]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("MasterA.v", 47, 10, true, false, false, false, false); // cd (w, ch) - Shift Key
+typeControlKey((HResource) null, "MasterA.v", 'c'); // cd (w, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TopLevel.v", 2); // k (j, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 75, 199); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 168, 217); // cd (w, ch)
+// Elapsed time: 16 seconds
+selectCodeEditor("TopLevel.v", 98, 218); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 98, 231); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 99, 251); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 142, 265); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 97, 280); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 97, 295); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 135, 316); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 133, 328); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 174, 348); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 131, 366); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 148, 401); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 184, 418); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 178, 432); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 181, 433); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 183, 435); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 183, 466); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 146, 482); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 147, 501); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 111, 215); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 105, 230); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 76, 247); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 96, 263); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 113, 281); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 90, 300); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 103, 311); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 105, 331); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 103, 346); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 121, 365); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 106, 400); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 104, 415); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 97, 431); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 119, 470); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 122, 485); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 108, 502); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 118, 500); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 76, 220); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 76, 220, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 115, 210); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 121, 214); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 88, 231); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 88, 231, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 112, 231); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 67, 248); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 67, 248, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("TopLevel.v", 67, 248); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 74, 248); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 74, 248, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("TopLevel.v", 71, 247); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 71, 247, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 83, 247); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 71, 263); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 71, 263, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 103, 263); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 89, 281); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 89, 281, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 117, 282); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 78, 294); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 78, 294, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 98, 295); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 92, 313); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 92, 313, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 113, 313); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 77, 331); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 77, 331, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 112, 334); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 88, 344); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 88, 344, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 111, 346); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 91, 364); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 91, 364, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 127, 366); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 87, 406); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 87, 406, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 108, 404); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 111, 401); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 84, 409); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 84, 409, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 110, 419); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 78, 429); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 78, 429, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 105, 435); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 87, 461); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 87, 461, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 122, 470); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 129, 467); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 91, 484); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 91, 484, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 127, 484); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 79, 503); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 79, 503, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 118, 501); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 207, 497); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 62, 474); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 24, 146, true, false, false, false, false); // cd (w, ch) - Shift Key
+typeControlKey((HResource) null, "TopLevel.v", 'c'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 68, 467); // cd (w, ch)
+typeControlKey((HResource) null, "TopLevel.v", 'v'); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 79, 208, true, false, false, false, false); // cd (w, ch) - Shift Key
+// Elapsed time: 10 seconds
+selectCodeEditor("TopLevel.v", 43, 528); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 67, 519); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 87, 194); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 143, 195); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 233, 192); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 25 seconds
+selectCodeEditor("TopLevel.v", 251, 222); // cd (w, ch)
+selectCodeEditor("TopLevel.v", 263, 203); // cd (w, ch)
+selectButton(PAResourceOtoP.PlanAheadTab_SHOW_FLOW_NAVIGATOR, "Flow Navigator"); // z (L, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevel (TopLevel.v)]", 3, true, false, false, false, true, false); // B (D, ch) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevel (TopLevel.v)]", 3, true, false, false, false, true, false); // B (D, ch) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevel (TopLevel.v)]", 3, true, false, false, false, true, false); // B (D, ch) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ac (ai, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top TopLevel [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+// [GUI Memory]: 98 MB (+63kb) [00:48:06]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // u (O, ch)
