@@ -58,7 +58,7 @@ module Arbiter(
                                                 HGRANT1 <= 1'b1;
                                                 HGRANT2 <= 1'b0;
                                                 HMASTER <= 2'b10;
-                                                
+                                            
                                             end
                                             else begin
                                                 HGRANT1 <= 1'b0;
@@ -69,9 +69,9 @@ module Arbiter(
                                     2'b10:
                                         begin
                                             if (HSPLITx == 2'b01) begin
-                                                  HGRANT1 <= 1'b0;
-                                                  HGRANT2 <= 1'b1;
-                                                  HMASTER <= 2'b01;
+                                                HGRANT1 <= 1'b0;
+                                                HGRANT2 <= 1'b1;
+                                                HMASTER <= 2'b01;
                                             end
                                             else begin
                                                 HGRANT1 <= 1'b1;
@@ -79,6 +79,19 @@ module Arbiter(
                                                 HMASTER <= 2'b10;
                                             end
                                         end
+                                    2'b11:
+                                        begin 
+                                            if (HSPLITx == 2'b01) begin
+                                                HGRANT1 <= 1'b0;
+                                                HGRANT2 <= 1'b1;
+                                                HMASTER <= 2'b01;
+                                             end
+                                             else begin 
+                                                HGRANT1 <= 1'b1;
+                                                HGRANT2 <= 1'b0;
+                                                HMASTER <= 2'b10;
+                                             end
+                                         end
                                     default:
                                         begin
                                             HGRANT1 <= 1'b0;

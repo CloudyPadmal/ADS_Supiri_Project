@@ -1,0 +1,158 @@
+/*
+
+Xilinx Vivado v2018.1 (64-bit) [Major: 2018, Minor: 1]
+SW Build: 2188600 on Wed Apr  4 18:40:38 MDT 2018
+IP Build: 2185939 on Wed Apr  4 20:55:05 MDT 2018
+
+Process ID: 6600
+License: Customer
+
+Current time: 	Wed Jun 13 23:02:49 IST 2018
+Time zone: 	India Standard Time (Asia/Colombo)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1536x864
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 202 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/Vivado/2018.1/tps/win64/jre
+Java executable location: 	D:/Vivado/2018.1/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	hp
+User home directory: C:/Users/hp
+User working directory: C:/Users/hp/Desktop/ADSProject1/SuperAHB
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Vivado
+HDI_APPROOT: D:/Vivado/2018.1
+RDI_DATADIR: D:/Vivado/2018.1/data
+RDI_BINDIR: D:/Vivado/2018.1/bin
+
+Vivado preferences file location: C:/Users/hp/AppData/Roaming/Xilinx/Vivado/2018.1/vivado.xml
+Vivado preferences directory: C:/Users/hp/AppData/Roaming/Xilinx/Vivado/2018.1/
+Vivado layouts directory: C:/Users/hp/AppData/Roaming/Xilinx/Vivado/2018.1/layouts
+PlanAhead jar file location: 	D:/Vivado/2018.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/hp/Desktop/ADSProject1/SuperAHB/vivado.log
+Vivado journal file location: 	C:/Users/hp/Desktop/ADSProject1/SuperAHB/vivado.jou
+Engine tmp dir: 	C:/Users/hp/Desktop/ADSProject1/SuperAHB/.Xil/Vivado-6600-DESKTOP-32FSOJU
+
+GUI allocated memory:	206 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 509 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 51 MB (+51279kb) [00:00:08]
+// [Engine Memory]: 489 MB (+360884kb) [00:00:08]
+// TclEventType: PROJECT_OPEN_DIALOG
+// bv (ch):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\hp\Desktop\ADSProject1\SuperAHB\SuperAHB.xpr. Version: Vivado v2018.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2018.1/data/ip'. 
+// [GUI Memory]: 63 MB (+9704kb) [00:00:12]
+// [Engine Memory]: 526 MB (+13038kb) [00:00:12]
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 600 MB (+50315kb) [00:00:13]
+// [GUI Memory]: 67 MB (+1191kb) [00:00:15]
+// HMemoryUtils.trashcanNow. Engine heap size: 616 MB. GUI used memory: 39 MB. Current time: 6/13/18 11:02:56 PM IST
+// Tcl Message: open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:08 . Memory (MB): peak = 822.141 ; gain = 99.910 
+// Project name: SuperAHB; location: C:/Users/hp/Desktop/ADSProject1/SuperAHB; part: xc7k70tfbg676-1
+dismissDialog("Open Project"); // bv (ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// a (ch): Critical Messages: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// [Engine Memory]: 635 MB (+5055kb) [00:00:23]
+dismissDialog("Critical Messages"); // a (ch)
+// Elapsed time: 12 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevel (TopLevel.v)]", 2); // B (D, ch)
+// PAPropertyPanels.initPanels (Arbiter.v) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevel (TopLevel.v), SupiriArbiter : Arbiter (Arbiter.v)]", 3, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevel (TopLevel.v), SupiriArbiter : Arbiter (Arbiter.v)]", 3, false, false, false, false, false, true); // B (D, ch) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 636 MB. GUI used memory: 39 MB. Current time: 6/13/18 11:03:21 PM IST
+// Elapsed time: 12 seconds
+selectCodeEditor("Arbiter.v", 305, 213); // cd (w, ch)
+// Elapsed time: 82 seconds
+selectCodeEditor("Arbiter.v", 474, 183); // cd (w, ch)
+// [GUI Memory]: 71 MB (+389kb) [00:02:19]
+typeControlKey((HResource) null, "Arbiter.v", 'c'); // cd (w, ch)
+selectCodeEditor("Arbiter.v", 334, 220); // cd (w, ch)
+typeControlKey((HResource) null, "Arbiter.v", 'v'); // cd (w, ch)
+selectCodeEditor("Arbiter.v", 751, 250); // cd (w, ch)
+// Elapsed time: 62 seconds
+selectCodeEditor("Arbiter.v", 350, 210); // cd (w, ch)
+selectCodeEditor("Arbiter.v", 349, 209); // cd (w, ch)
+selectCodeEditor("Arbiter.v", 498, 247); // cd (w, ch)
+// [GUI Memory]: 75 MB (+16kb) [00:04:12]
+// Elapsed time: 33 seconds
+selectCodeEditor("Arbiter.v", 306, 95); // cd (w, ch)
+selectCodeEditor("Arbiter.v", 457, 162); // cd (w, ch)
+// Elapsed time: 14 seconds
+selectCodeEditor("Arbiter.v", 446, 175); // cd (w, ch)
+selectCodeEditor("Arbiter.v", 455, 213); // cd (w, ch)
+// Elapsed time: 26 seconds
+selectCodeEditor("Arbiter.v", 365, 211); // cd (w, ch)
+selectCodeEditor("Arbiter.v", 359, 211); // cd (w, ch)
+// Elapsed time: 15 seconds
+selectCodeEditor("Arbiter.v", 377, 230); // cd (w, ch)
+selectCodeEditor("Arbiter.v", 319, 218); // cd (w, ch)
+// Elapsed time: 12 seconds
+selectCodeEditor("Arbiter.v", 337, 108); // cd (w, ch)
+typeControlKey((HResource) null, "Arbiter.v", 'c'); // cd (w, ch)
+selectCodeEditor("Arbiter.v", 314, 189); // cd (w, ch)
+typeControlKey((HResource) null, "Arbiter.v", 'v'); // cd (w, ch)
+selectCodeEditor("Arbiter.v", 621, 215); // cd (w, ch)
+// Elapsed time: 12 seconds
+selectCodeEditor("Arbiter.v", 306, 199); // cd (w, ch)
+// Elapsed time: 20 seconds
+selectCodeEditor("Arbiter.v", 316, 207); // cd (w, ch)
+selectCodeEditor("Arbiter.v", 314, 228); // cd (w, ch)
+// [GUI Memory]: 83 MB (+4207kb) [00:06:28]
+selectCodeEditor("Arbiter.v", 338, 111); // cd (w, ch)
+selectCodeEditor("Arbiter.v", 320, 159); // cd (w, ch)
+// Elapsed time: 29 seconds
+selectCodeEditor("Arbiter.v", 283, 32); // cd (w, ch)
+// Elapsed time: 12 seconds
+selectCodeEditor("Arbiter.v", 278, 37); // cd (w, ch)
+selectCodeEditor("Arbiter.v", 280, 44); // cd (w, ch)
+selectCodeEditor("Arbiter.v", 304, 63); // cd (w, ch)
+selectCodeEditor("Arbiter.v", 308, 63); // cd (w, ch)
+selectCodeEditor("Arbiter.v", 309, 160); // cd (w, ch)
+// Elapsed time: 12 seconds
+selectCodeEditor("Arbiter.v", 350, 145); // cd (w, ch)
+// Elapsed time: 10 seconds
+selectCodeEditor("Arbiter.v", 278, 193); // cd (w, ch)
+selectCodeEditor("Arbiter.v", 350, 210); // cd (w, ch)
+selectCodeEditor("Arbiter.v", 350, 210); // cd (w, ch)
+// [GUI Memory]: 87 MB (+347kb) [00:08:02]
+selectCodeEditor("Arbiter.v", 356, 200); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
