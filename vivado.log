@@ -21,3 +21,1952 @@ open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak 
 update_compile_order -fileset sources_1
 exiset_property top TopLevel [current_fileset]
 update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7k70tfbg676-1
+Top: TopLevel
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 919.719 ; gain = 102.160
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Arbiter' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+	Parameter NORMAL_STATE bound to: 0 - type: integer 
+	Parameter LOCKED_STATE bound to: 1 - type: integer 
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity Arbiter does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'Arbiter' (1#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'HMASTER' does not match port width (2) of module 'Arbiter' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:32]
+WARNING: [Synth 8-350] instance 'SupiriArbiter' of module 'Arbiter' requires 11 connections, but only 9 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:20]
+INFO: [Synth 8-6157] synthesizing module 'Decoder' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Decoder' (2#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-689] width (1) of port connection 'HADDR' does not match port width (14) of module 'Decoder' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:37]
+WARNING: [Synth 8-350] instance 'SupiriDecoder' of module 'Decoder' requires 9 connections, but only 6 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:36]
+INFO: [Synth 8-6157] synthesizing module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter LEAVE_ONE_CLOCK bound to: 4'b0000 
+	Parameter INITIATE_SLAVE bound to: 4'b0001 
+	Parameter INITIATE_WRITE_SLAVE bound to: 4'b0010 
+	Parameter INITIATE_READ_SLAVE bound to: 4'b0011 
+	Parameter WRITE_SLAVE bound to: 4'b0100 
+	Parameter READ_SLAVE bound to: 4'b0101 
+	Parameter SPLIT_WRITE_SLAVE bound to: 4'b0110 
+	Parameter SPLIT_READ_SLAVE bound to: 4'b0111 
+	Parameter WAIT_ANOTHER_WCLOCK bound to: 4'b1000 
+	Parameter WAIT_ANOTHER_RCLOCK bound to: 4'b1001 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:59]
+WARNING: [Synth 8-6014] Unused sequential element WRITE_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:53]
+WARNING: [Synth 8-6014] Unused sequential element READ_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'SlaveA' (3#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+WARNING: [Synth 8-689] width (1) of port connection 'HTRANS' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:48]
+WARNING: [Synth 8-689] width (1) of port connection 'HSIZE' does not match port width (3) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:49]
+WARNING: [Synth 8-689] width (1) of port connection 'HBURST' does not match port width (3) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:50]
+WARNING: [Synth 8-689] width (1) of port connection 'HMASTER' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:53]
+WARNING: [Synth 8-689] width (1) of port connection 'HSPLITx' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:55]
+WARNING: [Synth 8-689] width (1) of port connection 'HRESP' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:57]
+WARNING: [Synth 8-689] width (1) of port connection 'HRDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:59]
+WARNING: [Synth 8-689] width (1) of port connection 'HADDR' does not match port width (14) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:60]
+WARNING: [Synth 8-689] width (1) of port connection 'HWDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:61]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHRDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:63]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:64]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHWDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:65]
+WARNING: [Synth 8-689] width (1) of port connection 'HTRANS' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:71]
+WARNING: [Synth 8-689] width (1) of port connection 'HSIZE' does not match port width (3) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:72]
+WARNING: [Synth 8-689] width (1) of port connection 'HBURST' does not match port width (3) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:73]
+WARNING: [Synth 8-689] width (1) of port connection 'HMASTER' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:76]
+WARNING: [Synth 8-689] width (1) of port connection 'HSPLITx' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:78]
+WARNING: [Synth 8-689] width (1) of port connection 'HRESP' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:80]
+WARNING: [Synth 8-689] width (1) of port connection 'HRDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:82]
+WARNING: [Synth 8-689] width (1) of port connection 'HADDR' does not match port width (14) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:83]
+WARNING: [Synth 8-689] width (1) of port connection 'HWDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:84]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHRDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:86]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:87]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHWDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:88]
+WARNING: [Synth 8-689] width (1) of port connection 'HTRANS' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:94]
+WARNING: [Synth 8-689] width (1) of port connection 'HSIZE' does not match port width (3) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:95]
+WARNING: [Synth 8-689] width (1) of port connection 'HBURST' does not match port width (3) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:96]
+WARNING: [Synth 8-689] width (1) of port connection 'HMASTER' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:99]
+WARNING: [Synth 8-689] width (1) of port connection 'HSPLITx' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:101]
+WARNING: [Synth 8-689] width (1) of port connection 'HRESP' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:103]
+WARNING: [Synth 8-689] width (1) of port connection 'HRDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:105]
+WARNING: [Synth 8-689] width (1) of port connection 'HADDR' does not match port width (14) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:106]
+WARNING: [Synth 8-689] width (1) of port connection 'HWDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:107]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHRDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:109]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:110]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHWDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:111]
+INFO: [Synth 8-6157] synthesizing module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter INITIATE_BUS_REQUEST bound to: 3'b000 
+	Parameter INITIATE_WRITE bound to: 3'b001 
+	Parameter INITIATE_READ bound to: 3'b010 
+	Parameter WRITE_SPLIT bound to: 3'b011 
+	Parameter READ_SPLIT bound to: 3'b100 
+	Parameter READ_DATA bound to: 3'b101 
+	Parameter WRITE_FINISH bound to: 3'b110 
+	Parameter READ_FINISH bound to: 3'b111 
+INFO: [Synth 8-6155] done synthesizing module 'MasterA' (4#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+WARNING: [Synth 8-689] width (1) of port connection 'HRESP' does not match port width (2) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:119]
+WARNING: [Synth 8-689] width (1) of port connection 'HTRANS' does not match port width (2) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:124]
+WARNING: [Synth 8-689] width (1) of port connection 'HRDATA' does not match port width (32) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:127]
+WARNING: [Synth 8-689] width (1) of port connection 'HWDATA' does not match port width (32) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:128]
+WARNING: [Synth 8-689] width (1) of port connection 'HADDR' does not match port width (12) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:129]
+WARNING: [Synth 8-689] width (1) of port connection 'INHRDATA' does not match port width (32) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:131]
+WARNING: [Synth 8-689] width (1) of port connection 'INHWDATA' does not match port width (32) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:132]
+WARNING: [Synth 8-689] width (1) of port connection 'INHADDR' does not match port width (12) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:133]
+WARNING: [Synth 8-689] width (1) of port connection 'HRESP' does not match port width (2) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:140]
+WARNING: [Synth 8-689] width (1) of port connection 'HTRANS' does not match port width (2) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:145]
+WARNING: [Synth 8-689] width (1) of port connection 'HRDATA' does not match port width (32) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:148]
+WARNING: [Synth 8-689] width (1) of port connection 'HWDATA' does not match port width (32) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:149]
+WARNING: [Synth 8-689] width (1) of port connection 'HADDR' does not match port width (12) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:150]
+WARNING: [Synth 8-689] width (1) of port connection 'INHRDATA' does not match port width (32) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:152]
+WARNING: [Synth 8-689] width (1) of port connection 'INHWDATA' does not match port width (32) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:153]
+WARNING: [Synth 8-689] width (1) of port connection 'INHADDR' does not match port width (12) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:154]
+WARNING: [Synth 8-3848] Net S1_OUT in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:12]
+WARNING: [Synth 8-3848] Net S2_OUT in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:13]
+WARNING: [Synth 8-3848] Net S3_OUT in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:14]
+WARNING: [Synth 8-3848] Net ADDRESS_OUT in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:15]
+WARNING: [Synth 8-3848] Net HCLK in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:38]
+WARNING: [Synth 8-3848] Net HRESETn in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:39]
+WARNING: [Synth 8-3848] Net HSELx in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:46]
+WARNING: [Synth 8-3848] Net HSIZE in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:49]
+WARNING: [Synth 8-3848] Net HBURST in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:50]
+WARNING: [Synth 8-3848] Net HMASTER in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:53]
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:54]
+WARNING: [Synth 8-3848] Net OUTHRDATA in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:63]
+WARNING: [Synth 8-3848] Net HGRANTx in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:116]
+WARNING: [Synth 8-3848] Net RW in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:118]
+WARNING: [Synth 8-3848] Net INHWDATA in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:132]
+WARNING: [Synth 8-3848] Net INHADDR in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:133]
+INFO: [Synth 8-6155] done synthesizing module 'TopLevel' (5#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HBURST[2]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HBURST[1]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HBURST[0]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HMASTLOCK
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[13]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[12]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[11]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[10]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[9]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[8]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[7]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[6]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[5]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[4]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[3]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[2]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[0]
+WARNING: [Synth 8-3331] design Arbiter has unconnected port HMASTLOCK
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[31]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[30]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[29]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[28]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[27]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[26]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[25]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[24]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[23]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[22]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[21]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[20]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[19]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[18]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[17]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[16]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[15]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[14]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[13]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[12]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[11]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[10]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[9]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[8]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[7]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[6]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[5]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[4]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[3]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[2]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[1]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[0]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[31]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[30]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[29]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[28]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[27]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[26]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[25]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[24]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[23]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[22]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[21]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[20]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[19]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[18]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[17]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[16]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[15]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[14]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[13]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[12]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[11]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[10]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[9]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[8]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[7]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[6]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[5]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[4]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[3]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[2]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[1]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[0]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[31]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[30]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[29]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[28]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[27]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[26]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[25]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[24]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[23]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[22]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[21]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[20]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[19]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[18]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[17]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[16]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[15]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 964.297 ; gain = 146.738
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin SupiriArbiter:HSPLITx[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:20]
+WARNING: [Synth 8-3295] tying undriven pin SupiriArbiter:HSPLITx[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:20]
+WARNING: [Synth 8-3295] tying undriven pin SupiriArbiter:HREADY[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:20]
+WARNING: [Synth 8-3295] tying undriven pin SupiriArbiter:HREADY[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:20]
+WARNING: [Synth 8-3295] tying undriven pin SupiriArbiter:HREADY[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:20]
+WARNING: [Synth 8-3295] tying undriven pin SupiriArbiter:HLOCKx to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:20]
+WARNING: [Synth 8-3295] tying undriven pin SupiriDecoder:HCLK to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:36]
+WARNING: [Synth 8-3295] tying undriven pin SupiriDecoder:HRESETn to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:36]
+WARNING: [Synth 8-3295] tying undriven pin SupiriDecoder:A[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:36]
+WARNING: [Synth 8-3295] tying undriven pin SupiriDecoder:A[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:36]
+WARNING: [Synth 8-3295] tying undriven pin SupiriDecoder:B[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:36]
+WARNING: [Synth 8-3295] tying undriven pin SupiriDecoder:B[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:36]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSELx to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:45]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:45]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HRESETn to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:45]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HCLK to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:45]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HMASTER[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:45]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:OUTHRDATA[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:45]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSELx to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:68]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:68]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HRESETn to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:68]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HCLK to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:68]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HMASTER[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:68]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:OUTHRDATA[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:68]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSELx to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:91]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:91]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HRESETn to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:91]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HCLK to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:91]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HMASTER[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:91]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:OUTHRDATA[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:91]
+WARNING: [Synth 8-3295] tying undriven pin Master_AINTERFACE:HGRANTx to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:115]
+WARNING: [Synth 8-3295] tying undriven pin Master_AINTERFACE:RW to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:115]
+WARNING: [Synth 8-3295] tying undriven pin Master_AINTERFACE:HRESETn to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:115]
+WARNING: [Synth 8-3295] tying undriven pin Master_AINTERFACE:HCLK to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:115]
+WARNING: [Synth 8-3295] tying undriven pin Master_AINTERFACE:INHWDATA[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:115]
+WARNING: [Synth 8-3295] tying undriven pin Master_AINTERFACE:INHADDR[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:115]
+WARNING: [Synth 8-3295] tying undriven pin Master_BINTERFACE:HGRANTx to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:136]
+WARNING: [Synth 8-3295] tying undriven pin Master_BINTERFACE:RW to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:136]
+WARNING: [Synth 8-3295] tying undriven pin Master_BINTERFACE:HRESETn to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:136]
+WARNING: [Synth 8-3295] tying undriven pin Master_BINTERFACE:HCLK to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:136]
+WARNING: [Synth 8-3295] tying undriven pin Master_BINTERFACE:INHWDATA[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:136]
+WARNING: [Synth 8-3295] tying undriven pin Master_BINTERFACE:INHADDR[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:136]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 964.297 ; gain = 146.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 964.297 ; gain = 146.738
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbg676-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:34 . Memory (MB): peak = 1288.676 ; gain = 471.117
+16 Infos, 217 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:34 . Memory (MB): peak = 1288.676 ; gain = 471.117
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1304.367 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Arbiter' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+	Parameter NORMAL_STATE bound to: 0 - type: integer 
+	Parameter LOCKED_STATE bound to: 1 - type: integer 
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity Arbiter does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'Arbiter' (1#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'HMASTER' does not match port width (2) of module 'Arbiter' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:32]
+WARNING: [Synth 8-350] instance 'SupiriArbiter' of module 'Arbiter' requires 11 connections, but only 9 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:20]
+INFO: [Synth 8-6157] synthesizing module 'Decoder' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-3848] Net C in module/entity Decoder does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'Decoder' (2#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-689] width (1) of port connection 'HADDR' does not match port width (14) of module 'Decoder' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:37]
+WARNING: [Synth 8-350] instance 'SupiriDecoder' of module 'Decoder' requires 9 connections, but only 6 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:36]
+INFO: [Synth 8-6157] synthesizing module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter LEAVE_ONE_CLOCK bound to: 4'b0000 
+	Parameter INITIATE_SLAVE bound to: 4'b0001 
+	Parameter INITIATE_WRITE_SLAVE bound to: 4'b0010 
+	Parameter INITIATE_READ_SLAVE bound to: 4'b0011 
+	Parameter WRITE_SLAVE bound to: 4'b0100 
+	Parameter READ_SLAVE bound to: 4'b0101 
+	Parameter SPLIT_WRITE_SLAVE bound to: 4'b0110 
+	Parameter SPLIT_READ_SLAVE bound to: 4'b0111 
+	Parameter WAIT_ANOTHER_WCLOCK bound to: 4'b1000 
+	Parameter WAIT_ANOTHER_RCLOCK bound to: 4'b1001 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:59]
+WARNING: [Synth 8-6014] Unused sequential element WRITE_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:53]
+WARNING: [Synth 8-6014] Unused sequential element READ_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'SlaveA' (3#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+WARNING: [Synth 8-689] width (1) of port connection 'HTRANS' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:48]
+WARNING: [Synth 8-689] width (1) of port connection 'HSIZE' does not match port width (3) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:49]
+WARNING: [Synth 8-689] width (1) of port connection 'HBURST' does not match port width (3) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:50]
+WARNING: [Synth 8-689] width (1) of port connection 'HMASTER' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:53]
+WARNING: [Synth 8-689] width (1) of port connection 'HSPLITx' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:55]
+WARNING: [Synth 8-689] width (1) of port connection 'HRESP' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:57]
+WARNING: [Synth 8-689] width (1) of port connection 'HRDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:59]
+WARNING: [Synth 8-689] width (1) of port connection 'HADDR' does not match port width (14) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:60]
+WARNING: [Synth 8-689] width (1) of port connection 'HWDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:61]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHRDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:63]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:64]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHWDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:65]
+WARNING: [Synth 8-689] width (1) of port connection 'HTRANS' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:71]
+WARNING: [Synth 8-689] width (1) of port connection 'HSIZE' does not match port width (3) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:72]
+WARNING: [Synth 8-689] width (1) of port connection 'HBURST' does not match port width (3) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:73]
+WARNING: [Synth 8-689] width (1) of port connection 'HMASTER' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:76]
+WARNING: [Synth 8-689] width (1) of port connection 'HSPLITx' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:78]
+WARNING: [Synth 8-689] width (1) of port connection 'HRESP' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:80]
+WARNING: [Synth 8-689] width (1) of port connection 'HRDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:82]
+WARNING: [Synth 8-689] width (1) of port connection 'HADDR' does not match port width (14) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:83]
+WARNING: [Synth 8-689] width (1) of port connection 'HWDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:84]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHRDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:86]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:87]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHWDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:88]
+WARNING: [Synth 8-689] width (1) of port connection 'HTRANS' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:94]
+WARNING: [Synth 8-689] width (1) of port connection 'HSIZE' does not match port width (3) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:95]
+WARNING: [Synth 8-689] width (1) of port connection 'HBURST' does not match port width (3) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:96]
+WARNING: [Synth 8-689] width (1) of port connection 'HMASTER' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:99]
+WARNING: [Synth 8-689] width (1) of port connection 'HSPLITx' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:101]
+WARNING: [Synth 8-689] width (1) of port connection 'HRESP' does not match port width (2) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:103]
+WARNING: [Synth 8-689] width (1) of port connection 'HRDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:105]
+WARNING: [Synth 8-689] width (1) of port connection 'HADDR' does not match port width (14) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:106]
+WARNING: [Synth 8-689] width (1) of port connection 'HWDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:107]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHRDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:109]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:110]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHWDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:111]
+INFO: [Synth 8-6157] synthesizing module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter INITIATE_BUS_REQUEST bound to: 3'b000 
+	Parameter INITIATE_WRITE bound to: 3'b001 
+	Parameter INITIATE_READ bound to: 3'b010 
+	Parameter WRITE_SPLIT bound to: 3'b011 
+	Parameter READ_SPLIT bound to: 3'b100 
+	Parameter READ_DATA bound to: 3'b101 
+	Parameter WRITE_FINISH bound to: 3'b110 
+	Parameter READ_FINISH bound to: 3'b111 
+INFO: [Synth 8-6155] done synthesizing module 'MasterA' (4#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+WARNING: [Synth 8-689] width (1) of port connection 'HRESP' does not match port width (2) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:119]
+WARNING: [Synth 8-689] width (1) of port connection 'HTRANS' does not match port width (2) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:124]
+WARNING: [Synth 8-689] width (1) of port connection 'HRDATA' does not match port width (32) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:127]
+WARNING: [Synth 8-689] width (1) of port connection 'HWDATA' does not match port width (32) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:128]
+WARNING: [Synth 8-689] width (1) of port connection 'HADDR' does not match port width (12) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:129]
+WARNING: [Synth 8-689] width (1) of port connection 'INHRDATA' does not match port width (32) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:131]
+WARNING: [Synth 8-689] width (1) of port connection 'INHWDATA' does not match port width (32) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:132]
+WARNING: [Synth 8-689] width (1) of port connection 'INHADDR' does not match port width (12) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:133]
+WARNING: [Synth 8-689] width (1) of port connection 'HRESP' does not match port width (2) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:140]
+WARNING: [Synth 8-689] width (1) of port connection 'HTRANS' does not match port width (2) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:145]
+WARNING: [Synth 8-689] width (1) of port connection 'HRDATA' does not match port width (32) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:148]
+WARNING: [Synth 8-689] width (1) of port connection 'HWDATA' does not match port width (32) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:149]
+WARNING: [Synth 8-689] width (1) of port connection 'HADDR' does not match port width (12) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:150]
+WARNING: [Synth 8-689] width (1) of port connection 'INHRDATA' does not match port width (32) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:152]
+WARNING: [Synth 8-689] width (1) of port connection 'INHWDATA' does not match port width (32) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:153]
+WARNING: [Synth 8-689] width (1) of port connection 'INHADDR' does not match port width (12) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:154]
+WARNING: [Synth 8-3848] Net S1_OUT in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:12]
+WARNING: [Synth 8-3848] Net S2_OUT in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:13]
+WARNING: [Synth 8-3848] Net S3_OUT in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:14]
+WARNING: [Synth 8-3848] Net ADDRESS_OUT in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:15]
+WARNING: [Synth 8-3848] Net HCLK in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:38]
+WARNING: [Synth 8-3848] Net HRESETn in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:39]
+WARNING: [Synth 8-3848] Net HSELx in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:46]
+WARNING: [Synth 8-3848] Net HSIZE in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:49]
+WARNING: [Synth 8-3848] Net HBURST in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:50]
+WARNING: [Synth 8-3848] Net HMASTER in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:53]
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:54]
+WARNING: [Synth 8-3848] Net OUTHRDATA in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:63]
+WARNING: [Synth 8-3848] Net HGRANTx in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:116]
+WARNING: [Synth 8-3848] Net RW in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:118]
+WARNING: [Synth 8-3848] Net INHWDATA in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:132]
+WARNING: [Synth 8-3848] Net INHADDR in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:133]
+INFO: [Synth 8-6155] done synthesizing module 'TopLevel' (5#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HBURST[2]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HBURST[1]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HBURST[0]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HMASTLOCK
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[13]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[12]
+WARNING: [Synth 8-3331] design Decoder has unconnected port C[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port C[0]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[11]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[10]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[9]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[8]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[7]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[6]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[5]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[4]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[3]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[2]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[0]
+WARNING: [Synth 8-3331] design Decoder has unconnected port A[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port A[0]
+WARNING: [Synth 8-3331] design Decoder has unconnected port B[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port B[0]
+WARNING: [Synth 8-3331] design Arbiter has unconnected port HMASTLOCK
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[31]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[30]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[29]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[28]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[27]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[26]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[25]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[24]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[23]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[22]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[21]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[20]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[19]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[18]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[17]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[16]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[15]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[14]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[13]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[12]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[11]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[10]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[9]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[8]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[7]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[6]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[5]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[4]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[3]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[2]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[1]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S1_OUT[0]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[31]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[30]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[29]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[28]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[27]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[26]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[25]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[24]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[23]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[22]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[21]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[20]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[19]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[18]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[17]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[16]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[15]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[14]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[13]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[12]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[11]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[10]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[9]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[8]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[7]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[6]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[5]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[4]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[3]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[2]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[1]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S2_OUT[0]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[31]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[30]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[29]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[28]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[27]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[26]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[25]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[24]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[23]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[22]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port S3_OUT[21]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1339.992 ; gain = 35.625
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin SupiriArbiter:HSPLITx[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:20]
+WARNING: [Synth 8-3295] tying undriven pin SupiriArbiter:HSPLITx[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:20]
+WARNING: [Synth 8-3295] tying undriven pin SupiriArbiter:HREADY[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:20]
+WARNING: [Synth 8-3295] tying undriven pin SupiriArbiter:HREADY[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:20]
+WARNING: [Synth 8-3295] tying undriven pin SupiriArbiter:HREADY[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:20]
+WARNING: [Synth 8-3295] tying undriven pin SupiriArbiter:HLOCKx to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:20]
+WARNING: [Synth 8-3295] tying undriven pin SupiriDecoder:HCLK to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:36]
+WARNING: [Synth 8-3295] tying undriven pin SupiriDecoder:HRESETn to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:36]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSELx to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:45]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:45]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HRESETn to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:45]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HCLK to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:45]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HMASTER[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:45]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:OUTHRDATA[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:45]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSELx to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:68]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:68]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HRESETn to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:68]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HCLK to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:68]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HMASTER[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:68]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:OUTHRDATA[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:68]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSELx to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:91]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:91]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HRESETn to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:91]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HCLK to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:91]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HMASTER[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:91]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:OUTHRDATA[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:91]
+WARNING: [Synth 8-3295] tying undriven pin Master_AINTERFACE:HGRANTx to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:115]
+WARNING: [Synth 8-3295] tying undriven pin Master_AINTERFACE:RW to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:115]
+WARNING: [Synth 8-3295] tying undriven pin Master_AINTERFACE:HRESETn to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:115]
+WARNING: [Synth 8-3295] tying undriven pin Master_AINTERFACE:HCLK to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:115]
+WARNING: [Synth 8-3295] tying undriven pin Master_AINTERFACE:INHWDATA[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:115]
+WARNING: [Synth 8-3295] tying undriven pin Master_AINTERFACE:INHADDR[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:115]
+WARNING: [Synth 8-3295] tying undriven pin Master_BINTERFACE:HGRANTx to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:136]
+WARNING: [Synth 8-3295] tying undriven pin Master_BINTERFACE:RW to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:136]
+WARNING: [Synth 8-3295] tying undriven pin Master_BINTERFACE:HRESETn to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:136]
+WARNING: [Synth 8-3295] tying undriven pin Master_BINTERFACE:HCLK to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:136]
+WARNING: [Synth 8-3295] tying undriven pin Master_BINTERFACE:INHWDATA[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:136]
+WARNING: [Synth 8-3295] tying undriven pin Master_BINTERFACE:INHADDR[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:136]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1339.992 ; gain = 35.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1339.992 ; gain = 35.625
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 1339.992 ; gain = 35.625
+refresh_design
+WARNING: [Synth 8-2611] redeclaration of ansi port BUS_REQ_1 is not allowed [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:13]
+WARNING: [Synth 8-2611] redeclaration of ansi port BUS_REQ_2 is not allowed [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:13]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1339.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:22]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:35]
+INFO: [Synth 8-6157] synthesizing module 'Arbiter' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+	Parameter NORMAL_STATE bound to: 0 - type: integer 
+	Parameter LOCKED_STATE bound to: 1 - type: integer 
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity Arbiter does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'Arbiter' (1#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+WARNING: [Synth 8-350] instance 'SupiriArbiter' of module 'Arbiter' requires 11 connections, but only 10 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:45]
+INFO: [Synth 8-6157] synthesizing module 'Decoder' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-3848] Net C in module/entity Decoder does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'Decoder' (2#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-350] instance 'SupiriDecoder' of module 'Decoder' requires 9 connections, but only 6 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:62]
+INFO: [Synth 8-6157] synthesizing module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter LEAVE_ONE_CLOCK bound to: 4'b0000 
+	Parameter INITIATE_SLAVE bound to: 4'b0001 
+	Parameter INITIATE_WRITE_SLAVE bound to: 4'b0010 
+	Parameter INITIATE_READ_SLAVE bound to: 4'b0011 
+	Parameter WRITE_SLAVE bound to: 4'b0100 
+	Parameter READ_SLAVE bound to: 4'b0101 
+	Parameter SPLIT_WRITE_SLAVE bound to: 4'b0110 
+	Parameter SPLIT_READ_SLAVE bound to: 4'b0111 
+	Parameter WAIT_ANOTHER_WCLOCK bound to: 4'b1000 
+	Parameter WAIT_ANOTHER_RCLOCK bound to: 4'b1001 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:59]
+WARNING: [Synth 8-6014] Unused sequential element WRITE_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:53]
+WARNING: [Synth 8-6014] Unused sequential element READ_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'SlaveA' (3#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHRDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:89]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:90]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHWDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:91]
+WARNING: [Synth 8-350] instance 'Slave_AINTERFACE' of module 'SlaveA' requires 18 connections, but only 17 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:71]
+WARNING: [Synth 8-689] width (1) of port connection 'HBURST' does not match port width (3) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:99]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHRDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:112]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:113]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHWDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:114]
+WARNING: [Synth 8-689] width (1) of port connection 'HBURST' does not match port width (3) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:122]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHRDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:135]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:136]
+WARNING: [Synth 8-689] width (1) of port connection 'OUTHWDATA' does not match port width (32) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:137]
+INFO: [Synth 8-6157] synthesizing module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter INITIATE_BUS_REQUEST bound to: 3'b000 
+	Parameter INITIATE_WRITE bound to: 3'b001 
+	Parameter INITIATE_READ bound to: 3'b010 
+	Parameter WRITE_SPLIT bound to: 3'b011 
+	Parameter READ_SPLIT bound to: 3'b100 
+	Parameter READ_DATA bound to: 3'b101 
+	Parameter WRITE_FINISH bound to: 3'b110 
+	Parameter READ_FINISH bound to: 3'b111 
+INFO: [Synth 8-6155] done synthesizing module 'MasterA' (4#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+WARNING: [Synth 8-689] width (3) of port connection 'HREADY' does not match port width (1) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:143]
+WARNING: [Synth 8-6104] Input port 'BUS_REQ_1' has an internal driver [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:151]
+WARNING: [Synth 8-689] width (14) of port connection 'HADDR' does not match port width (12) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:155]
+ERROR: [Synth 8-685] variable 'HADDR' should not be used in output port connection [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:155]
+ERROR: [Synth 8-6156] failed synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1370.203 ; gain = 30.211
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+refresh_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1370.203 ; gain = 30.211
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1370.203 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:28]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:41]
+INFO: [Synth 8-6157] synthesizing module 'Arbiter' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+	Parameter NORMAL_STATE bound to: 0 - type: integer 
+	Parameter LOCKED_STATE bound to: 1 - type: integer 
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity Arbiter does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'Arbiter' (1#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+WARNING: [Synth 8-350] instance 'SupiriArbiter' of module 'Arbiter' requires 11 connections, but only 10 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:51]
+INFO: [Synth 8-6157] synthesizing module 'Decoder' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-3848] Net C in module/entity Decoder does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'Decoder' (2#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-350] instance 'SupiriDecoder' of module 'Decoder' requires 9 connections, but only 6 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:68]
+INFO: [Synth 8-6157] synthesizing module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter LEAVE_ONE_CLOCK bound to: 4'b0000 
+	Parameter INITIATE_SLAVE bound to: 4'b0001 
+	Parameter INITIATE_WRITE_SLAVE bound to: 4'b0010 
+	Parameter INITIATE_READ_SLAVE bound to: 4'b0011 
+	Parameter WRITE_SLAVE bound to: 4'b0100 
+	Parameter READ_SLAVE bound to: 4'b0101 
+	Parameter SPLIT_WRITE_SLAVE bound to: 4'b0110 
+	Parameter SPLIT_READ_SLAVE bound to: 4'b0111 
+	Parameter WAIT_ANOTHER_WCLOCK bound to: 4'b1000 
+	Parameter WAIT_ANOTHER_RCLOCK bound to: 4'b1001 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:58]
+WARNING: [Synth 8-6014] Unused sequential element WRITE_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:52]
+WARNING: [Synth 8-6014] Unused sequential element READ_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'SlaveA' (3#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:95]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:117]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:139]
+INFO: [Synth 8-6157] synthesizing module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter INITIATE_BUS_REQUEST bound to: 3'b000 
+	Parameter INITIATE_WRITE bound to: 3'b001 
+	Parameter INITIATE_READ bound to: 3'b010 
+	Parameter WRITE_SPLIT bound to: 3'b011 
+	Parameter READ_SPLIT bound to: 3'b100 
+	Parameter READ_DATA bound to: 3'b101 
+	Parameter WRITE_FINISH bound to: 3'b110 
+	Parameter READ_FINISH bound to: 3'b111 
+INFO: [Synth 8-6155] done synthesizing module 'MasterA' (4#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+WARNING: [Synth 8-689] width (3) of port connection 'HREADY' does not match port width (1) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:146]
+WARNING: [Synth 8-6104] Input port 'BUS_REQ_1' has an internal driver [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:154]
+WARNING: [Synth 8-689] width (14) of port connection 'HADDR' does not match port width (12) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:158]
+ERROR: [Synth 8-685] variable 'HADDR' should not be used in output port connection [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:158]
+ERROR: [Synth 8-6156] failed synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1375.293 ; gain = 5.090
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1375.293 ; gain = 5.090
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1375.293 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:29]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:42]
+INFO: [Synth 8-6157] synthesizing module 'Arbiter' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+	Parameter NORMAL_STATE bound to: 0 - type: integer 
+	Parameter LOCKED_STATE bound to: 1 - type: integer 
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity Arbiter does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'Arbiter' (1#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+WARNING: [Synth 8-350] instance 'SupiriArbiter' of module 'Arbiter' requires 11 connections, but only 10 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:52]
+INFO: [Synth 8-6157] synthesizing module 'Decoder' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-3848] Net C in module/entity Decoder does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'Decoder' (2#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-350] instance 'SupiriDecoder' of module 'Decoder' requires 9 connections, but only 6 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:69]
+INFO: [Synth 8-6157] synthesizing module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter LEAVE_ONE_CLOCK bound to: 4'b0000 
+	Parameter INITIATE_SLAVE bound to: 4'b0001 
+	Parameter INITIATE_WRITE_SLAVE bound to: 4'b0010 
+	Parameter INITIATE_READ_SLAVE bound to: 4'b0011 
+	Parameter WRITE_SLAVE bound to: 4'b0100 
+	Parameter READ_SLAVE bound to: 4'b0101 
+	Parameter SPLIT_WRITE_SLAVE bound to: 4'b0110 
+	Parameter SPLIT_READ_SLAVE bound to: 4'b0111 
+	Parameter WAIT_ANOTHER_WCLOCK bound to: 4'b1000 
+	Parameter WAIT_ANOTHER_RCLOCK bound to: 4'b1001 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:58]
+WARNING: [Synth 8-6014] Unused sequential element WRITE_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:52]
+WARNING: [Synth 8-6014] Unused sequential element READ_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'SlaveA' (3#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:96]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:118]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:140]
+INFO: [Synth 8-6157] synthesizing module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter INITIATE_BUS_REQUEST bound to: 3'b000 
+	Parameter INITIATE_WRITE bound to: 3'b001 
+	Parameter INITIATE_READ bound to: 3'b010 
+	Parameter WRITE_SPLIT bound to: 3'b011 
+	Parameter READ_SPLIT bound to: 3'b100 
+	Parameter READ_DATA bound to: 3'b101 
+	Parameter WRITE_FINISH bound to: 3'b110 
+	Parameter READ_FINISH bound to: 3'b111 
+INFO: [Synth 8-6155] done synthesizing module 'MasterA' (4#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+WARNING: [Synth 8-689] width (3) of port connection 'HREADY' does not match port width (1) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:147]
+WARNING: [Synth 8-6104] Input port 'BUS_REQ_1' has an internal driver [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:155]
+WARNING: [Synth 8-689] width (14) of port connection 'HADDR' does not match port width (12) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:159]
+ERROR: [Synth 8-685] variable 'HADDR' should not be used in output port connection [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:159]
+ERROR: [Synth 8-6156] failed synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1376.773 ; gain = 1.480
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1376.801 ; gain = 1.508
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1389.918 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:29]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:42]
+INFO: [Synth 8-6157] synthesizing module 'Arbiter' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+	Parameter NORMAL_STATE bound to: 0 - type: integer 
+	Parameter LOCKED_STATE bound to: 1 - type: integer 
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity Arbiter does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'Arbiter' (1#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+WARNING: [Synth 8-350] instance 'SupiriArbiter' of module 'Arbiter' requires 11 connections, but only 10 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:52]
+INFO: [Synth 8-6157] synthesizing module 'Decoder' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-3848] Net C in module/entity Decoder does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'Decoder' (2#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-350] instance 'SupiriDecoder' of module 'Decoder' requires 9 connections, but only 6 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:69]
+INFO: [Synth 8-6157] synthesizing module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter LEAVE_ONE_CLOCK bound to: 4'b0000 
+	Parameter INITIATE_SLAVE bound to: 4'b0001 
+	Parameter INITIATE_WRITE_SLAVE bound to: 4'b0010 
+	Parameter INITIATE_READ_SLAVE bound to: 4'b0011 
+	Parameter WRITE_SLAVE bound to: 4'b0100 
+	Parameter READ_SLAVE bound to: 4'b0101 
+	Parameter SPLIT_WRITE_SLAVE bound to: 4'b0110 
+	Parameter SPLIT_READ_SLAVE bound to: 4'b0111 
+	Parameter WAIT_ANOTHER_WCLOCK bound to: 4'b1000 
+	Parameter WAIT_ANOTHER_RCLOCK bound to: 4'b1001 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:58]
+WARNING: [Synth 8-6014] Unused sequential element WRITE_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:52]
+WARNING: [Synth 8-6014] Unused sequential element READ_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'SlaveA' (3#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:96]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:118]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:140]
+INFO: [Synth 8-6157] synthesizing module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter INITIATE_BUS_REQUEST bound to: 3'b000 
+	Parameter INITIATE_WRITE bound to: 3'b001 
+	Parameter INITIATE_READ bound to: 3'b010 
+	Parameter WRITE_SPLIT bound to: 3'b011 
+	Parameter READ_SPLIT bound to: 3'b100 
+	Parameter READ_DATA bound to: 3'b101 
+	Parameter WRITE_FINISH bound to: 3'b110 
+	Parameter READ_FINISH bound to: 3'b111 
+INFO: [Synth 8-6155] done synthesizing module 'MasterA' (4#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+WARNING: [Synth 8-689] width (3) of port connection 'HREADY' does not match port width (1) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:147]
+WARNING: [Synth 8-6104] Input port 'BUS_REQ_1' has an internal driver [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:155]
+WARNING: [Synth 8-689] width (14) of port connection 'HADDR' does not match port width (12) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:159]
+ERROR: [Synth 8-685] variable 'HADDR' should not be used in output port connection [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:159]
+ERROR: [Synth 8-6156] failed synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1389.918 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+refresh_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1389.918 ; gain = 0.000
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1389.918 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:30]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:43]
+INFO: [Synth 8-6157] synthesizing module 'Arbiter' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+	Parameter NORMAL_STATE bound to: 0 - type: integer 
+	Parameter LOCKED_STATE bound to: 1 - type: integer 
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity Arbiter does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'Arbiter' (1#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+WARNING: [Synth 8-350] instance 'SupiriArbiter' of module 'Arbiter' requires 11 connections, but only 10 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:53]
+INFO: [Synth 8-6157] synthesizing module 'Decoder' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-3848] Net C in module/entity Decoder does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'Decoder' (2#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-350] instance 'SupiriDecoder' of module 'Decoder' requires 9 connections, but only 6 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:70]
+INFO: [Synth 8-6157] synthesizing module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter LEAVE_ONE_CLOCK bound to: 4'b0000 
+	Parameter INITIATE_SLAVE bound to: 4'b0001 
+	Parameter INITIATE_WRITE_SLAVE bound to: 4'b0010 
+	Parameter INITIATE_READ_SLAVE bound to: 4'b0011 
+	Parameter WRITE_SLAVE bound to: 4'b0100 
+	Parameter READ_SLAVE bound to: 4'b0101 
+	Parameter SPLIT_WRITE_SLAVE bound to: 4'b0110 
+	Parameter SPLIT_READ_SLAVE bound to: 4'b0111 
+	Parameter WAIT_ANOTHER_WCLOCK bound to: 4'b1000 
+	Parameter WAIT_ANOTHER_RCLOCK bound to: 4'b1001 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:58]
+WARNING: [Synth 8-6014] Unused sequential element WRITE_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:52]
+WARNING: [Synth 8-6014] Unused sequential element READ_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'SlaveA' (3#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:97]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:119]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:141]
+INFO: [Synth 8-6157] synthesizing module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter INITIATE_BUS_REQUEST bound to: 3'b000 
+	Parameter INITIATE_WRITE bound to: 3'b001 
+	Parameter INITIATE_READ bound to: 3'b010 
+	Parameter WRITE_SPLIT bound to: 3'b011 
+	Parameter READ_SPLIT bound to: 3'b100 
+	Parameter READ_DATA bound to: 3'b101 
+	Parameter WRITE_FINISH bound to: 3'b110 
+	Parameter READ_FINISH bound to: 3'b111 
+INFO: [Synth 8-6155] done synthesizing module 'MasterA' (4#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+WARNING: [Synth 8-689] width (3) of port connection 'HREADY' does not match port width (1) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:148]
+WARNING: [Synth 8-6104] Input port 'BUS_REQ_1' has an internal driver [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:156]
+ERROR: [Synth 8-685] variable 'HADDR' should not be used in output port connection [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:160]
+ERROR: [Synth 8-6156] failed synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1389.918 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+refresh_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1389.918 ; gain = 0.000
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1389.918 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:30]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:43]
+INFO: [Synth 8-6157] synthesizing module 'Arbiter' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+	Parameter NORMAL_STATE bound to: 0 - type: integer 
+	Parameter LOCKED_STATE bound to: 1 - type: integer 
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity Arbiter does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'Arbiter' (1#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+WARNING: [Synth 8-350] instance 'SupiriArbiter' of module 'Arbiter' requires 11 connections, but only 10 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:53]
+INFO: [Synth 8-6157] synthesizing module 'Decoder' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-3848] Net C in module/entity Decoder does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'Decoder' (2#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-350] instance 'SupiriDecoder' of module 'Decoder' requires 9 connections, but only 6 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:70]
+INFO: [Synth 8-6157] synthesizing module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter LEAVE_ONE_CLOCK bound to: 4'b0000 
+	Parameter INITIATE_SLAVE bound to: 4'b0001 
+	Parameter INITIATE_WRITE_SLAVE bound to: 4'b0010 
+	Parameter INITIATE_READ_SLAVE bound to: 4'b0011 
+	Parameter WRITE_SLAVE bound to: 4'b0100 
+	Parameter READ_SLAVE bound to: 4'b0101 
+	Parameter SPLIT_WRITE_SLAVE bound to: 4'b0110 
+	Parameter SPLIT_READ_SLAVE bound to: 4'b0111 
+	Parameter WAIT_ANOTHER_WCLOCK bound to: 4'b1000 
+	Parameter WAIT_ANOTHER_RCLOCK bound to: 4'b1001 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:58]
+WARNING: [Synth 8-6014] Unused sequential element WRITE_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:52]
+WARNING: [Synth 8-6014] Unused sequential element READ_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'SlaveA' (3#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:97]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:119]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:141]
+INFO: [Synth 8-6157] synthesizing module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter INITIATE_BUS_REQUEST bound to: 3'b000 
+	Parameter INITIATE_WRITE bound to: 3'b001 
+	Parameter INITIATE_READ bound to: 3'b010 
+	Parameter WRITE_SPLIT bound to: 3'b011 
+	Parameter READ_SPLIT bound to: 3'b100 
+	Parameter READ_DATA bound to: 3'b101 
+	Parameter WRITE_FINISH bound to: 3'b110 
+	Parameter READ_FINISH bound to: 3'b111 
+INFO: [Synth 8-6155] done synthesizing module 'MasterA' (4#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+WARNING: [Synth 8-689] width (3) of port connection 'HREADY' does not match port width (1) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:148]
+WARNING: [Synth 8-6104] Input port 'BUS_REQ_1' has an internal driver [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:156]
+WARNING: [Synth 8-689] width (3) of port connection 'HREADY' does not match port width (1) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:169]
+WARNING: [Synth 8-6104] Input port 'BUS_REQ_2' has an internal driver [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:177]
+WARNING: [Synth 8-3848] Net HSIZE in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:22]
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'TopLevel' (5#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+WARNING: [Synth 8-3917] design TopLevel has port OUTHADDR[13] driven by constant 0
+WARNING: [Synth 8-3917] design TopLevel has port OUTHADDR[12] driven by constant 0
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HMASTLOCK
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[13]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[12]
+WARNING: [Synth 8-3331] design Decoder has unconnected port C[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port C[0]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[11]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[10]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[9]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[8]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[7]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[6]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[5]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[4]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[3]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[2]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[0]
+WARNING: [Synth 8-3331] design Decoder has unconnected port A[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port A[0]
+WARNING: [Synth 8-3331] design Decoder has unconnected port B[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port B[0]
+WARNING: [Synth 8-3331] design Arbiter has unconnected port HMASTLOCK
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[31]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[30]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[29]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[28]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[27]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[26]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[25]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[24]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[23]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[22]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[21]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[20]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[19]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[18]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[17]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[16]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[15]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[14]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[13]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[12]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[11]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[10]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[9]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[8]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[7]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[6]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[5]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[4]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[3]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[2]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[1]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[0]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[31]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[30]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[29]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[28]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[27]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[26]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[25]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[24]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[23]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[22]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[21]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[20]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[19]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[18]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[17]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[16]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[15]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[14]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[13]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[12]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[11]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[10]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[9]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[8]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[7]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[6]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[5]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[4]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[3]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[2]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[1]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1389.918 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:79]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:79]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:79]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:101]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:101]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:101]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:123]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:123]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:123]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1389.918 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1389.918 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1402.316 ; gain = 12.398
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1402.316 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:30]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:43]
+INFO: [Synth 8-6157] synthesizing module 'Arbiter' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+	Parameter NORMAL_STATE bound to: 0 - type: integer 
+	Parameter LOCKED_STATE bound to: 1 - type: integer 
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity Arbiter does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'Arbiter' (1#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+WARNING: [Synth 8-350] instance 'SupiriArbiter' of module 'Arbiter' requires 11 connections, but only 10 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:53]
+INFO: [Synth 8-6157] synthesizing module 'Decoder' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-3848] Net C in module/entity Decoder does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'Decoder' (2#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-350] instance 'SupiriDecoder' of module 'Decoder' requires 9 connections, but only 6 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:70]
+INFO: [Synth 8-6157] synthesizing module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter LEAVE_ONE_CLOCK bound to: 4'b0000 
+	Parameter INITIATE_SLAVE bound to: 4'b0001 
+	Parameter INITIATE_WRITE_SLAVE bound to: 4'b0010 
+	Parameter INITIATE_READ_SLAVE bound to: 4'b0011 
+	Parameter WRITE_SLAVE bound to: 4'b0100 
+	Parameter READ_SLAVE bound to: 4'b0101 
+	Parameter SPLIT_WRITE_SLAVE bound to: 4'b0110 
+	Parameter SPLIT_READ_SLAVE bound to: 4'b0111 
+	Parameter WAIT_ANOTHER_WCLOCK bound to: 4'b1000 
+	Parameter WAIT_ANOTHER_RCLOCK bound to: 4'b1001 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:58]
+WARNING: [Synth 8-6014] Unused sequential element WRITE_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:52]
+WARNING: [Synth 8-6014] Unused sequential element READ_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'SlaveA' (3#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:97]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:119]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:141]
+INFO: [Synth 8-6157] synthesizing module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter INITIATE_BUS_REQUEST bound to: 3'b000 
+	Parameter INITIATE_WRITE bound to: 3'b001 
+	Parameter INITIATE_READ bound to: 3'b010 
+	Parameter WRITE_SPLIT bound to: 3'b011 
+	Parameter READ_SPLIT bound to: 3'b100 
+	Parameter READ_DATA bound to: 3'b101 
+	Parameter WRITE_FINISH bound to: 3'b110 
+	Parameter READ_FINISH bound to: 3'b111 
+INFO: [Synth 8-6155] done synthesizing module 'MasterA' (4#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+WARNING: [Synth 8-689] width (3) of port connection 'HREADY' does not match port width (1) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:148]
+WARNING: [Synth 8-6104] Input port 'BUS_REQ_1' has an internal driver [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:156]
+WARNING: [Synth 8-689] width (1) of port connection 'HADDR' does not match port width (14) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:160]
+WARNING: [Synth 8-689] width (3) of port connection 'HREADY' does not match port width (1) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:169]
+WARNING: [Synth 8-6104] Input port 'BUS_REQ_2' has an internal driver [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:177]
+WARNING: [Synth 8-689] width (1) of port connection 'HADDR' does not match port width (14) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:181]
+WARNING: [Synth 8-3848] Net HSIZE in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:22]
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:20]
+WARNING: [Synth 8-3848] Net HADDR in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'TopLevel' (5#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+WARNING: [Synth 8-3917] design TopLevel has port OUTHADDR[13] driven by constant 0
+WARNING: [Synth 8-3917] design TopLevel has port OUTHADDR[12] driven by constant 0
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HMASTLOCK
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[13]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[12]
+WARNING: [Synth 8-3331] design Decoder has unconnected port C[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port C[0]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[11]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[10]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[9]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[8]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[7]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[6]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[5]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[4]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[3]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[2]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[0]
+WARNING: [Synth 8-3331] design Decoder has unconnected port A[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port A[0]
+WARNING: [Synth 8-3331] design Decoder has unconnected port B[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port B[0]
+WARNING: [Synth 8-3331] design Arbiter has unconnected port HMASTLOCK
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[31]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[30]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[29]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[28]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[27]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[26]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[25]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[24]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[23]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[22]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[21]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[20]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[19]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[18]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[17]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[16]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[15]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[14]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[13]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[12]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[11]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[10]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[9]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[8]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[7]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[6]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[5]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[4]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[3]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[2]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[1]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[0]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[31]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[30]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[29]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[28]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[27]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[26]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[25]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[24]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[23]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[22]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[21]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[20]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[19]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[18]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[17]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[16]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[15]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[14]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[13]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[12]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[11]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[10]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[9]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[8]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[7]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[6]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[5]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[4]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[3]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[2]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[1]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1402.316 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin SupiriDecoder:HADDR[13] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:70]
+WARNING: [Synth 8-3295] tying undriven pin SupiriDecoder:HADDR[12] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:70]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:79]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:79]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:79]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:101]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:101]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:101]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:123]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:123]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:123]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1402.316 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1402.316 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 1435.813 ; gain = 33.496
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1435.813 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:30]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:43]
+INFO: [Synth 8-6157] synthesizing module 'Arbiter' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+	Parameter NORMAL_STATE bound to: 0 - type: integer 
+	Parameter LOCKED_STATE bound to: 1 - type: integer 
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity Arbiter does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'Arbiter' (1#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+WARNING: [Synth 8-350] instance 'SupiriArbiter' of module 'Arbiter' requires 11 connections, but only 10 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:53]
+INFO: [Synth 8-6157] synthesizing module 'Decoder' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-3848] Net C in module/entity Decoder does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'Decoder' (2#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-350] instance 'SupiriDecoder' of module 'Decoder' requires 9 connections, but only 6 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:70]
+INFO: [Synth 8-6157] synthesizing module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter LEAVE_ONE_CLOCK bound to: 4'b0000 
+	Parameter INITIATE_SLAVE bound to: 4'b0001 
+	Parameter INITIATE_WRITE_SLAVE bound to: 4'b0010 
+	Parameter INITIATE_READ_SLAVE bound to: 4'b0011 
+	Parameter WRITE_SLAVE bound to: 4'b0100 
+	Parameter READ_SLAVE bound to: 4'b0101 
+	Parameter SPLIT_WRITE_SLAVE bound to: 4'b0110 
+	Parameter SPLIT_READ_SLAVE bound to: 4'b0111 
+	Parameter WAIT_ANOTHER_WCLOCK bound to: 4'b1000 
+	Parameter WAIT_ANOTHER_RCLOCK bound to: 4'b1001 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:58]
+WARNING: [Synth 8-6014] Unused sequential element WRITE_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:52]
+WARNING: [Synth 8-6014] Unused sequential element READ_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'SlaveA' (3#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:97]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:119]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:141]
+INFO: [Synth 8-6157] synthesizing module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter INITIATE_BUS_REQUEST bound to: 3'b000 
+	Parameter INITIATE_WRITE bound to: 3'b001 
+	Parameter INITIATE_READ bound to: 3'b010 
+	Parameter WRITE_SPLIT bound to: 3'b011 
+	Parameter READ_SPLIT bound to: 3'b100 
+	Parameter READ_DATA bound to: 3'b101 
+	Parameter WRITE_FINISH bound to: 3'b110 
+	Parameter READ_FINISH bound to: 3'b111 
+INFO: [Synth 8-6155] done synthesizing module 'MasterA' (4#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+WARNING: [Synth 8-689] width (3) of port connection 'HREADY' does not match port width (1) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:148]
+WARNING: [Synth 8-6104] Input port 'BUS_REQ_1' has an internal driver [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:156]
+WARNING: [Synth 8-689] width (3) of port connection 'HREADY' does not match port width (1) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:169]
+WARNING: [Synth 8-6104] Input port 'BUS_REQ_2' has an internal driver [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:177]
+WARNING: [Synth 8-3848] Net HSIZE in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:22]
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:20]
+WARNING: [Synth 8-3848] Net HADDR in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'TopLevel' (5#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+WARNING: [Synth 8-3917] design TopLevel has port OUTHADDR[13] driven by constant 0
+WARNING: [Synth 8-3917] design TopLevel has port OUTHADDR[12] driven by constant 0
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HMASTLOCK
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[13]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[12]
+WARNING: [Synth 8-3331] design Decoder has unconnected port C[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port C[0]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[11]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[10]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[9]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[8]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[7]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[6]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[5]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[4]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[3]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[2]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[0]
+WARNING: [Synth 8-3331] design Decoder has unconnected port A[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port A[0]
+WARNING: [Synth 8-3331] design Decoder has unconnected port B[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port B[0]
+WARNING: [Synth 8-3331] design Arbiter has unconnected port HMASTLOCK
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[31]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[30]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[29]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[28]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[27]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[26]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[25]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[24]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[23]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[22]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[21]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[20]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[19]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[18]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[17]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[16]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[15]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[14]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[13]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[12]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[11]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[10]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[9]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[8]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[7]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[6]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[5]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[4]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[3]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[2]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[1]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[0]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[31]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[30]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[29]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[28]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[27]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[26]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[25]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[24]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[23]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[22]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[21]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[20]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[19]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[18]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[17]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[16]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[15]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[14]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[13]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[12]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[11]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[10]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[9]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[8]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[7]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[6]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[5]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[4]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[3]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[2]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[1]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1435.813 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin SupiriDecoder:HADDR[13] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:70]
+WARNING: [Synth 8-3295] tying undriven pin SupiriDecoder:HADDR[12] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:70]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:79]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:79]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:79]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:101]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:101]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:101]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:123]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:123]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:123]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1435.813 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1435.813 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1465.387 ; gain = 29.574
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1465.387 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:31]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:44]
+INFO: [Synth 8-6157] synthesizing module 'Arbiter' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+	Parameter NORMAL_STATE bound to: 0 - type: integer 
+	Parameter LOCKED_STATE bound to: 1 - type: integer 
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity Arbiter does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'Arbiter' (1#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+WARNING: [Synth 8-350] instance 'SupiriArbiter' of module 'Arbiter' requires 11 connections, but only 10 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:54]
+INFO: [Synth 8-6157] synthesizing module 'Decoder' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-3848] Net C in module/entity Decoder does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'Decoder' (2#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-350] instance 'SupiriDecoder' of module 'Decoder' requires 9 connections, but only 6 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:71]
+INFO: [Synth 8-6157] synthesizing module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter LEAVE_ONE_CLOCK bound to: 4'b0000 
+	Parameter INITIATE_SLAVE bound to: 4'b0001 
+	Parameter INITIATE_WRITE_SLAVE bound to: 4'b0010 
+	Parameter INITIATE_READ_SLAVE bound to: 4'b0011 
+	Parameter WRITE_SLAVE bound to: 4'b0100 
+	Parameter READ_SLAVE bound to: 4'b0101 
+	Parameter SPLIT_WRITE_SLAVE bound to: 4'b0110 
+	Parameter SPLIT_READ_SLAVE bound to: 4'b0111 
+	Parameter WAIT_ANOTHER_WCLOCK bound to: 4'b1000 
+	Parameter WAIT_ANOTHER_RCLOCK bound to: 4'b1001 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:58]
+WARNING: [Synth 8-6014] Unused sequential element WRITE_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:52]
+WARNING: [Synth 8-6014] Unused sequential element READ_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'SlaveA' (3#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:98]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:120]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:142]
+INFO: [Synth 8-6157] synthesizing module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter INITIATE_BUS_REQUEST bound to: 3'b000 
+	Parameter INITIATE_WRITE bound to: 3'b001 
+	Parameter INITIATE_READ bound to: 3'b010 
+	Parameter WRITE_SPLIT bound to: 3'b011 
+	Parameter READ_SPLIT bound to: 3'b100 
+	Parameter READ_DATA bound to: 3'b101 
+	Parameter WRITE_FINISH bound to: 3'b110 
+	Parameter READ_FINISH bound to: 3'b111 
+INFO: [Synth 8-6155] done synthesizing module 'MasterA' (4#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+WARNING: [Synth 8-689] width (3) of port connection 'HREADY' does not match port width (1) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:149]
+WARNING: [Synth 8-6104] Input port 'BUS_REQ_1' has an internal driver [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:157]
+WARNING: [Synth 8-689] width (3) of port connection 'HREADY' does not match port width (1) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:170]
+WARNING: [Synth 8-6104] Input port 'BUS_REQ_2' has an internal driver [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:178]
+WARNING: [Synth 8-3848] Net HSIZE in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:22]
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:20]
+WARNING: [Synth 8-3848] Net HADDR in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'TopLevel' (5#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+WARNING: [Synth 8-3917] design TopLevel has port OUTHADDR[13] driven by constant 0
+WARNING: [Synth 8-3917] design TopLevel has port OUTHADDR[12] driven by constant 0
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HMASTLOCK
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[13]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[12]
+WARNING: [Synth 8-3331] design Decoder has unconnected port C[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port C[0]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[11]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[10]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[9]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[8]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[7]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[6]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[5]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[4]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[3]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[2]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[0]
+WARNING: [Synth 8-3331] design Decoder has unconnected port A[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port A[0]
+WARNING: [Synth 8-3331] design Decoder has unconnected port B[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port B[0]
+WARNING: [Synth 8-3331] design Arbiter has unconnected port HMASTLOCK
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[31]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[30]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[29]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[28]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[27]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[26]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[25]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[24]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[23]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[22]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[21]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[20]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[19]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[18]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[17]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[16]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[15]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[14]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[13]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[12]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[11]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[10]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[9]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[8]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[7]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[6]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[5]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[4]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[3]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[2]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[1]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[0]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[31]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[30]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[29]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[28]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[27]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[26]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[25]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[24]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[23]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[22]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[21]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[20]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[19]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[18]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[17]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[16]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[15]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[14]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[13]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[12]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[11]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[10]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[9]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[8]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[7]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[6]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[5]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[4]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[3]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[2]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[1]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1465.387 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin SupiriDecoder:HADDR[13] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:71]
+WARNING: [Synth 8-3295] tying undriven pin SupiriDecoder:HADDR[12] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:71]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:80]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:80]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:80]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:102]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:102]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:102]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:124]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:124]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:124]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1465.387 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1465.387 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 1472.645 ; gain = 7.258
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1472.645 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:31]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:44]
+INFO: [Synth 8-6157] synthesizing module 'Arbiter' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+	Parameter NORMAL_STATE bound to: 0 - type: integer 
+	Parameter LOCKED_STATE bound to: 1 - type: integer 
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity Arbiter does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'Arbiter' (1#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:23]
+WARNING: [Synth 8-350] instance 'SupiriArbiter' of module 'Arbiter' requires 11 connections, but only 10 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:54]
+INFO: [Synth 8-6157] synthesizing module 'Decoder' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-3848] Net C in module/entity Decoder does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'Decoder' (2#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:24]
+WARNING: [Synth 8-350] instance 'SupiriDecoder' of module 'Decoder' requires 9 connections, but only 6 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:71]
+INFO: [Synth 8-6157] synthesizing module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter LEAVE_ONE_CLOCK bound to: 4'b0000 
+	Parameter INITIATE_SLAVE bound to: 4'b0001 
+	Parameter INITIATE_WRITE_SLAVE bound to: 4'b0010 
+	Parameter INITIATE_READ_SLAVE bound to: 4'b0011 
+	Parameter WRITE_SLAVE bound to: 4'b0100 
+	Parameter READ_SLAVE bound to: 4'b0101 
+	Parameter SPLIT_WRITE_SLAVE bound to: 4'b0110 
+	Parameter SPLIT_READ_SLAVE bound to: 4'b0111 
+	Parameter WAIT_ANOTHER_WCLOCK bound to: 4'b1000 
+	Parameter WAIT_ANOTHER_RCLOCK bound to: 4'b1001 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:58]
+WARNING: [Synth 8-6014] Unused sequential element WRITE_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:52]
+WARNING: [Synth 8-6014] Unused sequential element READ_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'SlaveA' (3#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:98]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:120]
+WARNING: [Synth 8-689] width (14) of port connection 'OUTHADDR' does not match port width (12) of module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:142]
+INFO: [Synth 8-6157] synthesizing module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter INITIATE_BUS_REQUEST bound to: 3'b000 
+	Parameter INITIATE_WRITE bound to: 3'b001 
+	Parameter INITIATE_READ bound to: 3'b010 
+	Parameter WRITE_SPLIT bound to: 3'b011 
+	Parameter READ_SPLIT bound to: 3'b100 
+	Parameter READ_DATA bound to: 3'b101 
+	Parameter WRITE_FINISH bound to: 3'b110 
+	Parameter READ_FINISH bound to: 3'b111 
+INFO: [Synth 8-6155] done synthesizing module 'MasterA' (4#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+WARNING: [Synth 8-689] width (3) of port connection 'HREADY' does not match port width (1) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:149]
+WARNING: [Synth 8-6104] Input port 'BUS_REQ_1' has an internal driver [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:157]
+WARNING: [Synth 8-689] width (3) of port connection 'HREADY' does not match port width (1) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:170]
+WARNING: [Synth 8-6104] Input port 'BUS_REQ_2' has an internal driver [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:178]
+WARNING: [Synth 8-3848] Net HSIZE in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:22]
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:20]
+WARNING: [Synth 8-3848] Net HADDR in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'TopLevel' (5#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+WARNING: [Synth 8-3917] design TopLevel has port OUTHADDR[13] driven by constant 0
+WARNING: [Synth 8-3917] design TopLevel has port OUTHADDR[12] driven by constant 0
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HMASTLOCK
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[13]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[12]
+WARNING: [Synth 8-3331] design Decoder has unconnected port C[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port C[0]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[11]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[10]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[9]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[8]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[7]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[6]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[5]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[4]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[3]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[2]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[0]
+WARNING: [Synth 8-3331] design Decoder has unconnected port A[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port A[0]
+WARNING: [Synth 8-3331] design Decoder has unconnected port B[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port B[0]
+WARNING: [Synth 8-3331] design Arbiter has unconnected port HMASTLOCK
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[31]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[30]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[29]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[28]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[27]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[26]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[25]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[24]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[23]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[22]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[21]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[20]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[19]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[18]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[17]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[16]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[15]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[14]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[13]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[12]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[11]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[10]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[9]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[8]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[7]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[6]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[5]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[4]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[3]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[2]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[1]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M1_IN[0]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[31]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[30]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[29]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[28]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[27]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[26]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[25]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[24]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[23]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[22]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[21]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[20]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[19]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[18]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[17]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[16]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[15]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[14]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[13]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[12]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[11]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[10]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[9]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[8]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[7]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[6]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[5]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[4]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[3]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[2]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[1]
+WARNING: [Synth 8-3331] design TopLevel has unconnected port M2_IN[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1472.645 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin SupiriDecoder:HADDR[13] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:71]
+WARNING: [Synth 8-3295] tying undriven pin SupiriDecoder:HADDR[12] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:71]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:80]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:80]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:80]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:102]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:102]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:102]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:124]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:124]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:124]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1472.645 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1472.645 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 1477.770 ; gain = 5.125

@@ -12,7 +12,7 @@ module MasterA(
     // Data from outside ports
     input [31:0] HRDATA,
     output reg [31:0] HWDATA,
-    output reg [11:0] HADDR,
+    output reg [13:0] HADDR,
     // Data from inside ports
     output reg [31:0] INHRDATA,
     input [31:0] INHWDATA,

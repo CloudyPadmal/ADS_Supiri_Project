@@ -3,7 +3,6 @@ module SlaveA(
     input HWRITE,
     input [1:0] HTRANS,
     input [2:0] HSIZE,
-    input [2:0] HBURST,
     input HRESETn,
     input HCLK,
     input [1:0] HMASTER,

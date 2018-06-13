@@ -32,51 +32,42 @@ module Decoder(
     output reg HSELx2,
     output reg HSELx3
     );
-    
-    always @ (HRESETn)
-        if (HRESETn == 1'b0) 
+        
+    always @ (posedge HCLK) 
+        if (!HRESETn) 
             begin
                 HSELx1 = 1'b0;
                 HSELx2 = 1'b0;
                 HSELx3 = 1'b0;
-            end        
-    
-    always @ (posedge HCLK) 
-        case (HADDR[13:12])
-            2'b01:
-                begin
-                    HSELx1 = 1'b1;
-                    HSELx2 = 1'b0;
-                    HSELx3 = 1'b0;
-                end
-            2'b10:
-                begin
-                    HSELx1 = 1'b0;
-                    HSELx2 = 1'b1;
-                    HSELx3 = 1'b0;
-                end
-            2'b11:
-                begin
-                    HSELx1 = 1'b0;
-                    HSELx2 = 1'b0;
-                    HSELx3 = 1'b1;
-                end
-            default:
-                begin
-                    HSELx1 = 1'b0;
-                    HSELx2 = 1'b0;
-                    HSELx3 = 1'b0;
-                end
+            end
+         else begin
+            case (HADDR[13:12])
+                2'b01:
+                    begin
+                        HSELx1 = 1'b1;
+                        HSELx2 = 1'b0;
+                        HSELx3 = 1'b0;
+                    end
+                2'b10:
+                    begin
+                        HSELx1 = 1'b0;
+                        HSELx2 = 1'b1;
+                        HSELx3 = 1'b0;
+                    end
+                2'b11:
+                    begin
+                        HSELx1 = 1'b0;
+                        HSELx2 = 1'b0;
+                        HSELx3 = 1'b1;
+                    end
+                default:
+                    begin
+                        HSELx1 = 1'b0;
+                        HSELx2 = 1'b0;
+                        HSELx3 = 1'b0;
+                    end
         endcase
-        
-    always @ (posedge HCLK)
-        begin
-            if (A < B)
-                C <= 1;
-            else
-                C <= 0;
-        end
-    
+    end    
 endmodule
 
 module Decoder_tb();
