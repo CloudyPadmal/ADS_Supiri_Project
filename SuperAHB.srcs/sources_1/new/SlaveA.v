@@ -19,7 +19,7 @@ module SlaveA(
     output reg [13:0] OUTHADDR,
     output reg [31:0] OUTHWDATA
 );
-
+    parameter 
     reg [3:0] SLAVE_STATE;
     reg WRITE_COMPLETE;
     reg READ_COMPLETE;
@@ -60,13 +60,14 @@ module SlaveA(
         end
         else begin
             if (HSELx) begin
-                HREADY <= 1;
+                //HREADY <= 1;
                 case (SLAVE_STATE)
                     LEAVE_ONE_CLOCK: begin
                         SLAVE_STATE <= INITIATE_SLAVE;
                     end
                     INITIATE_SLAVE: begin
                         OUTHADDR <= HADDR[11:0]; //Decoder Out
+                        HREADY <= 1;
                         if (HWRITE) begin
                             SLAVE_STATE <= INITIATE_WRITE_SLAVE;
                         end
@@ -75,6 +76,7 @@ module SlaveA(
                         end
                     end
                     INITIATE_WRITE_SLAVE: begin
+                        HREADY <= 0;
                         if (HSIZE == 0) begin
                             SLAVE_STATE <= WRITE_SLAVE;
                         end
@@ -94,6 +96,7 @@ module SlaveA(
                         end
                     end
                     INITIATE_READ_SLAVE: begin
+                        HREADY <= 0;
                         if (HSIZE == 0) begin
                             SLAVE_STATE <= READ_SLAVE;
                         end
@@ -131,7 +134,7 @@ module SlaveA(
             end
             else begin
                 // Slave is not selected
-                HREADY <= 0;
+                HREADY <= 1;
             end
         end
     end

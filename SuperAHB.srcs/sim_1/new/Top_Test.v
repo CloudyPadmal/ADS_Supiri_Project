@@ -4,7 +4,7 @@ module Top_Test();
 
     reg HCLK;
     reg HRESETn;
-    reg RW;
+    reg RW1,RW2;
     reg BUS_REQ_1, BUS_REQ_2;
     reg [31:0] OUTHRDATA_A, OUTHRDATA_B, OUTHRDATA_C;
     wire [13:0] ADDRESS_FROM_SLAVE_TO_US_A, ADDRESS_FROM_SLAVE_TO_US_B, ADDRESS_FROM_SLAVE_TO_US_C;
@@ -24,9 +24,10 @@ module Top_Test();
     TopLevel UUT(
         .CLK(HCLK),
         .RST(HRESETn),
-        .RW(RW),
-        .BUS_REQ_1(BUS_REQ_1),
-        .BUS_REQ_2(BUS_REQ_2),
+        .RW1(RW1),
+        .RW2(RW2),
+        //.BUS_REQ_1(BUS_REQ_1),
+        //.BUS_REQ_2(BUS_REQ_2),
         .OUTHRDATA_A(OUTHRDATA_A),
         .OUTHRDATA_B(OUTHRDATA_B),
         .OUTHRDATA_C(OUTHRDATA_C),
@@ -51,13 +52,12 @@ module Top_Test();
         #2
         HRESETn = 1'b1;
         #2
-        RW = 1;
-        BUS_REQ_1 = 1;
-        BUS_REQ_2 = 0;
+        //RW = 1;
+        RW1 = 1;
+        RW2 = 0;
         DATA_FROM_MASTER_TO_SLAVE1 = 32'd25;
         ADDRESS_FROM_US_TO_MASTER_TO_SLAVE1 = 14'b01_0011_0100_0111;
-        #20
-        $finish;
+        #40 $finish;
        end
     
     

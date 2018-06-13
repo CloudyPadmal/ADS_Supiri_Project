@@ -1,9 +1,10 @@
 module TopLevel(
     input CLK,
     input RST,
-    input RW,
-    input BUS_REQ_1,
-    input BUS_REQ_2,
+    input RW1,
+    input RW2,
+    //input BUS_REQ_1,
+    //input BUS_REQ_2,
     input [31:0] OUTHRDATA_A, OUTHRDATA_B, OUTHRDATA_C,
     output [13:0] ADDRESS_FROM_SLAVE_TO_US_A,
     output [13:0] ADDRESS_FROM_SLAVE_TO_US_B,
@@ -20,7 +21,7 @@ module TopLevel(
     
 );
     
-    wire GRANTED_1,GRANTED_2,HWRITE,HMASTLOCK,HLOCK_A,HLOCK_B;
+    wire GRANTED_1,GRANTED_2,HWRITE,HMASTLOCK,HLOCK_A,HLOCK_B,BUS_REQ_1,BUS_REQ_2;
     wire [1:0] HSPLIT,HMASTER,HTRANS,HRESP;
     wire [2:0] HSEL,HREADY,HSIZE;
     reg [13:0] HADDR_MUX_OUT;
@@ -33,11 +34,11 @@ module TopLevel(
     
     always @(*)begin
         case(HMASTER)
-            2'b01:begin
+            2'b10:begin
                 HWDATA_MUX_OUT <= HWDATA_A;
                 HADDR_MUX_OUT <= HADDR_A;
             end
-            2'b10:begin
+            2'b01:begin
                 HWDATA_MUX_OUT <= HWDATA_B;
                 HADDR_MUX_OUT <= HADDR_B;
             end
@@ -151,7 +152,7 @@ module TopLevel(
     MasterA Master_AINTERFACE(
         .HGRANTx(GRANTED_1),
         .HREADY(HREADY),
-        .RW(RW),
+        .RW(RW1),
         .HRESP(HRESP),
         .HRESETn(RST),
         .HCLK(CLK),
@@ -172,7 +173,7 @@ module TopLevel(
      MasterA Master_BINTERFACE(
         .HGRANTx(GRANTED_2),
         .HREADY(HREADY),
-        .RW(RW),
+        .RW(RW2),
         .HRESP(HRESP),
         .HRESETn(RST),
         .HCLK(CLK),

@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed Jun 13 21:12:48 2018
+# Process ID: 5612
+# Current directory: C:/Users/hp/Desktop/ADSProject1/SuperAHB
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6276 C:\Users\hp\Desktop\ADSProject1\SuperAHB\SuperAHB.xpr
+# Log file: C:/Users/hp/Desktop/ADSProject1/SuperAHB/vivado.log
+# Journal file: C:/Users/hp/Desktop/ADSProject1/SuperAHB\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_simulation
+source Top_Test.tcl
+synth_design -rtl -name rtl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Arbiter_Sim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_simulation
+source Arbiter_Sim.tcl
+close_sim
+close_sim

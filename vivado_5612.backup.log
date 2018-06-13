@@ -1,0 +1,282 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed Jun 13 21:12:48 2018
+# Process ID: 5612
+# Current directory: C:/Users/hp/Desktop/ADSProject1/SuperAHB
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6276 C:\Users\hp\Desktop\ADSProject1\SuperAHB\SuperAHB.xpr
+# Log file: C:/Users/hp/Desktop/ADSProject1/SuperAHB/vivado.log
+# Journal file: C:/Users/hp/Desktop/ADSProject1/SuperAHB\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 807.688 ; gain = 79.352
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Jun 13 21:13:17 2018] Launched synth_1...
+Run output will be captured here: C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/synth_1/runme.log
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_Test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_Test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Arbiter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-311] analyzing module Decoder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MasterA
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SlaveA
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TopLevel
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Top_Test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_Test
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto f81f935f6c124af098a510bcb63b1fa4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_Test_behav xil_defaultlib.Top_Test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 1 for port HREADY [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:153]
+WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 1 for port HREADY [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:174]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Arbiter
+Compiling module xil_defaultlib.Decoder
+Compiling module xil_defaultlib.SlaveA
+Compiling module xil_defaultlib.MasterA
+Compiling module xil_defaultlib.TopLevel
+Compiling module xil_defaultlib.Top_Test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_Test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Top_Test_behav -key {Behavioral:sim_1:Functional:Top_Test} -tclbatch {Top_Test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+source Top_Test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 26 ns : File "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Top_Test.v" Line 60
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Top_Test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 838.629 ; gain = 18.098
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7k70tfbg676-1
+Top: TopLevel
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 971.859 ; gain = 110.527
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TopLevel' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:35]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:48]
+INFO: [Synth 8-6157] synthesizing module 'Arbiter' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:3]
+	Parameter NORMAL_STATE bound to: 0 - type: integer 
+	Parameter LOCKED_STATE bound to: 1 - type: integer 
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity Arbiter does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'Arbiter' (1#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Arbiter.v:3]
+WARNING: [Synth 8-350] instance 'SupiriArbiter' of module 'Arbiter' requires 11 connections, but only 10 given [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Decoder' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Decoder' (2#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/Decoder.v:3]
+INFO: [Synth 8-6157] synthesizing module 'SlaveA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter LEAVE_ONE_CLOCK bound to: 4'b0000 
+	Parameter INITIATE_SLAVE bound to: 4'b0001 
+	Parameter INITIATE_WRITE_SLAVE bound to: 4'b0010 
+	Parameter INITIATE_READ_SLAVE bound to: 4'b0011 
+	Parameter WRITE_SLAVE bound to: 4'b0100 
+	Parameter READ_SLAVE bound to: 4'b0101 
+	Parameter SPLIT_WRITE_SLAVE bound to: 4'b0110 
+	Parameter SPLIT_READ_SLAVE bound to: 4'b0111 
+	Parameter WAIT_ANOTHER_WCLOCK bound to: 4'b1000 
+	Parameter WAIT_ANOTHER_RCLOCK bound to: 4'b1001 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:64]
+WARNING: [Synth 8-6014] Unused sequential element WRITE_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:52]
+WARNING: [Synth 8-6014] Unused sequential element READ_COMPLETE_reg was removed.  [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'SlaveA' (3#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/SlaveA.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+	Parameter OKAY bound to: 2'b00 
+	Parameter ERROR bound to: 2'b01 
+	Parameter RETRY bound to: 2'b10 
+	Parameter SPLIT bound to: 2'b11 
+	Parameter IDLE bound to: 2'b00 
+	Parameter BUSY bound to: 2'b01 
+	Parameter NONSEQ bound to: 2'b10 
+	Parameter SEQ bound to: 2'b11 
+	Parameter INITIATE_BUS_REQUEST bound to: 3'b000 
+	Parameter INITIATE_WRITE bound to: 3'b001 
+	Parameter INITIATE_READ bound to: 3'b010 
+	Parameter WRITE_SPLIT bound to: 3'b011 
+	Parameter READ_SPLIT bound to: 3'b100 
+	Parameter READ_DATA bound to: 3'b101 
+	Parameter WRITE_FINISH bound to: 3'b110 
+	Parameter READ_FINISH bound to: 3'b111 
+INFO: [Synth 8-6155] done synthesizing module 'MasterA' (4#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/MasterA.v:1]
+WARNING: [Synth 8-689] width (3) of port connection 'HREADY' does not match port width (1) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:153]
+WARNING: [Synth 8-6104] Input port 'BUS_REQ_1' has an internal driver [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:161]
+WARNING: [Synth 8-689] width (3) of port connection 'HREADY' does not match port width (1) of module 'MasterA' [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:174]
+WARNING: [Synth 8-6104] Input port 'BUS_REQ_2' has an internal driver [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:182]
+WARNING: [Synth 8-3848] Net HSIZE in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:25]
+WARNING: [Synth 8-3848] Net HMASTLOCK in module/entity TopLevel does not have driver. [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'TopLevel' (5#1) [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:1]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HMASTLOCK
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[13]
+WARNING: [Synth 8-3331] design SlaveA has unconnected port HADDR[12]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[11]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[10]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[9]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[8]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[7]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[6]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[5]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[4]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[3]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[2]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[1]
+WARNING: [Synth 8-3331] design Decoder has unconnected port HADDR[0]
+WARNING: [Synth 8-3331] design Arbiter has unconnected port HMASTLOCK
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1017.832 ; gain = 156.500
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:84]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:84]
+WARNING: [Synth 8-3295] tying undriven pin Slave_AINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:84]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:106]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:106]
+WARNING: [Synth 8-3295] tying undriven pin Slave_BINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:106]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[2] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:128]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[1] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:128]
+WARNING: [Synth 8-3295] tying undriven pin Slave_CINTERFACE:HSIZE[0] to constant 0 [C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sources_1/new/TopLevel.v:128]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1017.832 ; gain = 156.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1017.832 ; gain = 156.500
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbg676-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1343.707 ; gain = 482.375
+17 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1343.707 ; gain = 482.375
+set_property top Arbiter_Sim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/synth_1
+
+launch_runs synth_1 -jobs 2
+[Wed Jun 13 22:34:29 2018] Launched synth_1...
+Run output will be captured here: C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.runs/synth_1/runme.log
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Arbiter_Sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Arbiter_Sim_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto f81f935f6c124af098a510bcb63b1fa4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Arbiter_Sim_behav xil_defaultlib.Arbiter_Sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Arbiter
+Compiling module xil_defaultlib.Arbiter_Sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Arbiter_Sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Arbiter_Sim_behav -key {Behavioral:sim_1:Functional:Arbiter_Sim} -tclbatch {Arbiter_Sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+source Arbiter_Sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 30 ns : File "C:/Users/hp/Desktop/ADSProject1/SuperAHB/SuperAHB.srcs/sim_1/new/Arbiter_Sim.v" Line 52
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1360.895 ; gain = 5.516
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Arbiter_Sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1360.895 ; gain = 5.516
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 13 22:39:34 2018...
