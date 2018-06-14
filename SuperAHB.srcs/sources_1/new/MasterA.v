@@ -42,7 +42,7 @@ module MasterA(
     localparam [2:0] WRITE_FINISH           = 6;
     localparam [2:0] READ_FINISH            = 7;
 
-    always @ (posedge HCLK) begin
+    always @ (posedge HCLK or negedge HRESETn) begin
         if (!HRESETn) begin
             // Reset all the pins
             MASTER_STATE <= INITIATE_BUS_REQUEST;

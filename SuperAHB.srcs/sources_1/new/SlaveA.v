@@ -19,11 +19,11 @@ module SlaveA(
     output reg [13:0] OUTHADDR,
     output reg [31:0] OUTHWDATA
 );
-   // parameter 
+    parameter ADD_LENGTH = 12;
     reg [3:0] SLAVE_STATE;
     reg WRITE_COMPLETE;
     reg READ_COMPLETE;
-
+    
     localparam  OKAY    = 2'b00,
                 ERROR   = 2'b01,
                 RETRY   = 2'b10,
@@ -45,7 +45,7 @@ module SlaveA(
     localparam [3:0] WAIT_ANOTHER_WCLOCK    = 8;
     localparam [3:0] WAIT_ANOTHER_RCLOCK    = 9;
     
-    always @ (posedge HCLK) begin
+    always @ (posedge HCLK or negedge HRESETn) begin
         if (!HRESETn) begin
             // Reset all the pins
             SLAVE_STATE <= LEAVE_ONE_CLOCK;
@@ -66,7 +66,7 @@ module SlaveA(
                         SLAVE_STATE <= INITIATE_SLAVE;
                     end
                     INITIATE_SLAVE: begin
-                        OUTHADDR <= HADDR[11:0]; //Decoder Out
+                        OUTHADDR <= HADDR[ADD_LENGTH:0]; //Decoder Out
                         HREADY <= 1;
                         if (HWRITE) begin
                             SLAVE_STATE <= INITIATE_WRITE_SLAVE;
