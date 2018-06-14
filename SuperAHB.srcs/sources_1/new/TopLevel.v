@@ -82,7 +82,7 @@ module TopLevel(
         .HSELx3(HSEL[2])
     );
     
-    SlaveA Slave_AINTERFACE(
+    SlaveA #(.ADD_LENGTH(11)) Slave_AINTERFACE(
         .HSELx(HSEL[0]),
         .HWRITE(HWRITE),
         .HTRANS(HTRANS),
@@ -104,7 +104,7 @@ module TopLevel(
         .OUTHWDATA(DATA_FROM_SLAVE_TO_US_A)
     );
     
-    SlaveA Slave_BINTERFACE(
+    SlaveA #(.ADD_LENGTH(11)) Slave_BINTERFACE(
         .HSELx(HSEL[1]),
         .HWRITE(HWRITE),
         .HTRANS(HTRANS),
@@ -126,7 +126,7 @@ module TopLevel(
         .OUTHWDATA(DATA_FROM_SLAVE_TO_US_B)
     );
         
-    SlaveA Slave_CINTERFACE(
+    SlaveA #(.ADD_LENGTH(12)) Slave_CINTERFACE(
         .HSELx(HSEL[2]),
         .HWRITE(HWRITE),
         .HTRANS(HTRANS),

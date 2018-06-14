@@ -9,7 +9,7 @@ module Decoder(
     output reg HSELx3
     );
         
-    always @ (posedge HCLK) 
+    always @ (posedge HCLK or negedge HRESETn) 
         if (!HRESETn) 
             begin
                 HSELx1 = 1'b0;
